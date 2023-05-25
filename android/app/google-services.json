@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "363044180735",
+    "project_id": "repair-duniya-d2e58",
+    "storage_bucket": "repair-duniya-d2e58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363044180735:android:714b7619d8e58ad46532ca",
+        "android_client_info": {
+          "package_name": "com.example.repair_duniya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363044180735-udnddpog0d84jnjr50442gdvsvclrk1d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8zYSmp2od0AqEaAyoaPWiHfIHZ9EERQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363044180735-udnddpog0d84jnjr50442gdvsvclrk1d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
