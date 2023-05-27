@@ -85,12 +85,12 @@ class _homeState extends State<Myhome> {
           child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(top: 20, right: 230),
+            padding: EdgeInsets.only(top: 8, bottom: 10),
             child: SizedBox(
               height: 50,
               width: double.infinity,
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 12),
+                padding: const EdgeInsets.only(bottom: 0),
                 child: ElevatedButton.icon(
                   onPressed: () {
                     Navigator.push(
@@ -102,25 +102,39 @@ class _homeState extends State<Myhome> {
                     "assets/location-pin1-com.svg",
                     height: 30,
                   ),
-                  label: Column(
-                    children: [
-                      Text(
-                        "Location",
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 15),
-                        child: Text(
-                          "Kormangala",
-                          style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.grey),
-                        ),
-                      )
-                    ],
+                  label: ListTile(
+                    title: Text(
+                      "Location",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Text(
+                      "Kormangala",
+                      style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.grey),
+                    ),
                   ),
+                  // label: Column(
+                  //   children: [
+                  //     Text(
+                  //       "Location",
+                  //       style: TextStyle(
+                  //           fontSize: 20, fontWeight: FontWeight.bold),
+                  //     ),
+                  //     Padding(
+                  //       padding: EdgeInsets.only(left: 15),
+                  //       child: Text(
+                  //         "Kormangala",
+                  //         style: TextStyle(
+                  //             fontSize: 13,
+                  //             fontWeight: FontWeight.w500,
+                  //             color: Colors.grey),
+                  //       ),
+                  //     )
+                  //   ],
+                  // ),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
                     foregroundColor: Colors.black,

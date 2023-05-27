@@ -4,13 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:repair_duniya/Model_Screens/Subscription/subscriptionView.dart';
 import 'package:repair_duniya/pop_Up_Screen/Date_Screen.dart';
 import '../pop_Up_Screen/Install_Screen.dart';
+import '../Model_Screens/Subscription/subscriptionView.dart';
 
 class bookingButton extends StatelessWidget {
   const bookingButton({super.key});
 
   @override
   Widget build(BuildContext context) {
-    bool IsSubscribed = true;
+    bool IsSubscribed = false;
     return Column(
       children: [
         Padding(
@@ -19,12 +20,14 @@ class bookingButton extends StatelessWidget {
             children: [
               SizedBox(
                 height: 50,
-                width: 177.5,
+                width: 160,
                 child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                   child: ElevatedButton(
                       onPressed: () {
-                        DateBottomSheet();
+                        // Navigator.of(context).push(MaterialPageRoute(
+                        //   builder: (context) => MySub(),
+                        // ));
                       },
                       style: ButtonStyle(
                         overlayColor: MaterialStateProperty.resolveWith<Color?>(
@@ -49,10 +52,11 @@ class bookingButton extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                   child: ElevatedButton(
                       onPressed: () {
-                        if (IsSubscribed) {
-                          showCustomModalBottomSheet(context);
-                        }
-                        SubscriptionView();
+                        showCustomModalBottomSheet(context);
+                        // if (IsSubscribed) {
+                        //   showCustomModalBottomSheet(context);
+                        // }
+                        // MySub();
                       },
                       style: ButtonStyle(
                         overlayColor: MaterialStateProperty.resolveWith<Color?>(
@@ -74,9 +78,7 @@ class bookingButton extends StatelessWidget {
           children: [
             Padding(padding: EdgeInsets.only(left: 10)),
             TextButton(
-                onPressed: () {
-                  SubscriptionView();
-                },
+                onPressed: () {},
                 child: Text(
                   'Why urgent booking?',
                   style: TextStyle(
