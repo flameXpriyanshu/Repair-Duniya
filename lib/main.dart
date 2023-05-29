@@ -44,7 +44,7 @@ void main() async {
       'home_board': (context) => home_board(),
       'subscriptionView': (context) => SubscriptionView(),
     },
-    home: MyOtp(),
+    home: Myhome(),
     debugShowCheckedModeBanner: false,
   ));
 }
