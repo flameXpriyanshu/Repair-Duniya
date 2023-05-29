@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GiftVouchers extends StatelessWidget {
   const GiftVouchers({Key? key}) : super(key: key);
@@ -24,11 +25,11 @@ class GiftVouchers extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.black,
                     fontStyle: FontStyle.italic,
-                    fontSize: 25,
+                    fontSize: 25.sp,
                     fontWeight: FontWeight.w500),
               ),
               SizedBox(
-                height: 13,
+                height: 13.h,
               ),
               Wrap(
                 crossAxisAlignment: WrapCrossAlignment.start,
@@ -36,22 +37,22 @@ class GiftVouchers extends StatelessWidget {
                   BulletText(
                       'Gift voucher will not issued for all bookings it will be depends up on your repair price'),
                   SizedBox(
-                    height: 46,
+                    height: 46.h,
                   ),
                   BulletText(
                       'After completion of your  repair gift voucher will be shared with you through the E-mail/Whatsapp'),
                   SizedBox(
-                    height: 65,
+                    height: 60.h,
                   ),
                   BulletText(
                       'Selected vouchers applicable, only after the repair has been done by our technicians successfully'),
                   SizedBox(
-                    height: 65,
+                    height: 60.h,
                   ),
                   BulletText(
                       'You have to use a gift voucher before its vailidity date which is mentioned on it'),
                   SizedBox(
-                    height: 46,
+                    height: 46.h,
                   ),
                   BulletText(
                       'If physical stores accept these gift vouchers tell them the voucher number, Otherwise use it digitally'),
@@ -75,7 +76,7 @@ class BulletText extends StatelessWidget {
       children: [
         Text(
           '\u{1F381}',
-          style: TextStyle(fontSize: 16.0),
+          style: TextStyle(fontSize: 16.sp),
         ),
         SizedBox(width: 8.0),
         Expanded(
@@ -83,7 +84,7 @@ class BulletText extends StatelessWidget {
             text,
             style: TextStyle(
               color: Colors.black87,
-              fontSize: 15,
+              fontSize: 15.sp,
             ),
           ),
         ),

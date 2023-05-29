@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ContactUs extends StatelessWidget {
   const ContactUs({Key? key}) : super(key: key);
@@ -23,18 +24,18 @@ class ContactUs extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.black,
                     fontStyle: FontStyle.italic,
-                    fontSize: 25,
+                    fontSize: 25.sp,
                     fontWeight: FontWeight.w500),
               ),
               SizedBox(
-                height: 20,
+                height: 20.h,
               ),
               Wrap(
                 crossAxisAlignment: WrapCrossAlignment.start,
                 children: [
                   BulletText('Mail us at: repairsduniya@gmail.com'),
                   SizedBox(
-                    height: 60,
+                    height: 60.h,
                   ),
                   BulletText('Our support 24/7 available: \n+91 9550589138'),
                 ],
@@ -57,14 +58,14 @@ class BulletText extends StatelessWidget {
       children: [
         Text(
           '\u25cf',
-          style: TextStyle(fontSize: 16.0),
+          style: TextStyle(fontSize: 16.sp),
         ),
-        SizedBox(width: 8.0),
+        SizedBox(width: 8.w),
         Expanded(
           child: Text(
             text,
             style: TextStyle(
-                color: Colors.black, fontSize: 18, fontWeight: FontWeight.w400),
+                color: Colors.black, fontSize: 18.sp, fontWeight: FontWeight.w400),
           ),
         ),
       ],

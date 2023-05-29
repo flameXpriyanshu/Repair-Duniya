@@ -83,7 +83,7 @@ class Support extends StatelessWidget {
                                       fontSize: 17.sp)),
                               WidgetSpan(
                                   child: SizedBox(
-                                height: 10,
+                                height: 10.h,
                               )),
                               TextSpan(
                                 text: 'Popular help resources',
@@ -91,7 +91,7 @@ class Support extends StatelessWidget {
                             ])),
                       ),
                       SizedBox(
-                        height: 20,
+                        height: 20.h,
                       ),
                       Image.asset(
                         'assets/icon_new.png',
@@ -121,7 +121,7 @@ class Support extends StatelessWidget {
                       hintText: 'Search Something...',
                       hintStyle: TextStyle(
                         color: Colors.black54,
-                        fontSize: 17,
+                        fontSize: 17.sp,
                         fontWeight: FontWeight.w400,
                       ),
                       prefixIcon: Icon(
@@ -134,7 +134,7 @@ class Support extends StatelessWidget {
             ),
             Positioned(
               top: MediaQuery.of(context).size.height / 3.25,
-              height: 280,
+              height: 280.h,
               width: MediaQuery.of(context).size.width,
               child: Column(
                 children: [
@@ -151,7 +151,7 @@ class Support extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                      height: 8), // Adjust the spacing between rows as needed
+                      height: 8.h), // Adjust the spacing between rows as needed
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -174,7 +174,7 @@ class Support extends StatelessWidget {
                   child: Text('FREQUENTLY ASKED QUESTIONS',
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
-                          fontSize: 18,
+                          fontSize: 18.sp,
                           letterSpacing: 0.1)),
                 )),
             Positioned(
@@ -273,12 +273,12 @@ Widget _buildList(
       leading: Text(
         num,
         style: TextStyle(
-            color: Colors.black, fontWeight: FontWeight.w500, fontSize: 20),
+            color: Colors.black, fontWeight: FontWeight.w500, fontSize: 20.sp),
       ),
       title: Text(
         title,
         style: TextStyle(
-            color: Colors.black87, fontWeight: FontWeight.w500, fontSize: 19),
+            color: Colors.black87, fontWeight: FontWeight.w500, fontSize: 19.sp),
       ),
       children: [
         ListTile(

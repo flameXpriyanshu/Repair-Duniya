@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:repair_duniya/icon_Screen.dart/painter.dart';
 import 'package:repair_duniya/icon_Screen.dart/salon.dart';
 import 'package:repair_duniya/icon_Screen.dart/screen_widgets.dart';
@@ -18,8 +19,8 @@ Widget AC(BuildContext context) {
         Material(
           type: MaterialType.transparency,
           child: Ink(
-            height: 50,
-            width: 50,
+            height: 50.w,
+            width: 50.w,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: ExactAssetImage('assets/air-conditioner.png'),
@@ -60,8 +61,8 @@ Widget Washer(BuildContext context) {
         Material(
           type: MaterialType.transparency,
           child: Ink(
-            height: 50,
-            width: 50,
+            height: 50.w,
+            width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
               // border: Border.all(width: 1, color: Colors.grey),
@@ -101,8 +102,8 @@ Widget Oven(BuildContext context) {
         Material(
           type: MaterialType.transparency,
           child: Ink(
-            height: 50,
-            width: 50,
+            height: 50.w,
+            width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
               // border: Border.all(width: 1, color: Colors.grey),
@@ -143,8 +144,8 @@ Widget Refrigerator(BuildContext context) {
         Material(
           type: MaterialType.transparency,
           child: Ink(
-            height: 50,
-            width: 50,
+            height: 50.w,
+            width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
               // border: Border.all(width: 1, color: Colors.grey),
@@ -185,8 +186,8 @@ Widget Fan(BuildContext context) {
         Material(
           type: MaterialType.transparency,
           child: Ink(
-            height: 50,
-            width: 50,
+            height: 50.w,
+            width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
               // border: Border.all(width: 1, color: Colors.grey),
@@ -227,8 +228,8 @@ Widget Motercycle(BuildContext context) {
         Material(
           type: MaterialType.transparency,
           child: Ink(
-            height: 50,
-            width: 50,
+            height: 50.w,
+            width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
               // border: Border.all(width: 1, color: Colors.grey),
@@ -269,8 +270,8 @@ Widget Television(BuildContext context) {
         Material(
           type: MaterialType.transparency,
           child: Ink(
-            height: 50,
-            width: 50,
+            height: 50.w,
+            width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
               // border: Border.all(width: 1, color: Colors.grey),
@@ -311,8 +312,8 @@ Widget More(BuildContext context) {
         Material(
           type: MaterialType.transparency,
           child: Ink(
-            height: 50,
-            width: 50,
+            height: 50.w,
+            width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
               // border: Border.all(width: 1, color: Colors.grey),
@@ -344,8 +345,8 @@ Widget Salon(BuildContext context) {
         Material(
           type: MaterialType.transparency,
           child: Ink(
-            height: 50,
-            width: 50,
+            height: 50.w,
+            width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
               // border: Border.all(width: 1, color: Colors.grey),
@@ -382,8 +383,8 @@ Widget Painting(BuildContext context) {
         Material(
           type: MaterialType.transparency,
           child: Ink(
-            height: 50,
-            width: 50,
+            height: 50.w,
+            width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
               // border: Border.all(width: 1, color: Colors.grey),
@@ -420,8 +421,8 @@ Widget Cleaning(BuildContext context) {
         Material(
           type: MaterialType.transparency,
           child: Ink(
-            height: 50,
-            width: 50,
+            height: 50.w,
+            width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
               border: Border.all(width: 1, color: Colors.grey),
@@ -453,8 +454,8 @@ Widget More_service(BuildContext context) {
         Material(
           type: MaterialType.transparency,
           child: Ink(
-            height: 50,
-            width: 50,
+            height: 50.w,
+            width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
               // border: Border.all(width: 1, color: Colors.grey),
@@ -483,8 +484,8 @@ Widget _buildBody() {
   return ClipRRect(
       borderRadius: BorderRadius.circular(14),
       child: Container(
-        height: 180,
-        width: 500,
+        height: 180.h,
+        width: 500.w,
         child: Stack(children: <Widget>[
           Image.asset(
             "assets/RoomGarden.jpg",

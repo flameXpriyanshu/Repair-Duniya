@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pinput/pinput.dart';
 import 'package:repair_duniya/Model_Screens/Home_Screen/home.dart';
 import 'package:repair_duniya/Model_Screens/Login_All_Screen/phone.dart';
@@ -23,11 +24,12 @@ class _MyOtpState extends State<MyOtp> {
   @override
   int _current = 0;
   Widget build(BuildContext context) {
+    ScreenUtil.init(context);
     final defaultPinTheme = PinTheme(
-      width: 56,
-      height: 56,
+      width: 56.w,
+      height: 56.w,
       textStyle: TextStyle(
-        fontSize: 25,
+        fontSize: 25.sp,
         color: Color.fromRGBO(30, 60, 87, 1),
       ),
       decoration: BoxDecoration(
@@ -50,8 +52,8 @@ class _MyOtpState extends State<MyOtp> {
     final List<Widget> imgSlider = widget.imgList
         .map(
           (item) => Container(
-            height: 500,
-            width: 1000,
+            height: 500.h,
+            width: 1000.w,
             child: Stack(
               children: [
                 Image.asset(item, fit: BoxFit.fill, width: double.infinity),
@@ -84,8 +86,8 @@ class _MyOtpState extends State<MyOtp> {
             children: widget.imgList.map((url) {
               int index = widget.imgList.indexOf(url);
               return Container(
-                width: 8,
-                height: 8,
+                width: 8.h,
+                height: 8.h,
                 margin: EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 3,
@@ -97,22 +99,22 @@ class _MyOtpState extends State<MyOtp> {
             }).toList(),
           ),
           SizedBox(
-            height: 7,
+            height: 7.h,
           ),
           Text(
             'Enter the OTP',
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
             textAlign: TextAlign.start,
           ),
           SizedBox(
-            height: 7,
+            height: 7.h,
           ),
           Text(
             'We have sent an OTP to 9336113936',
-            style: TextStyle(fontSize: 14),
+            style: TextStyle(fontSize: 14.sp),
           ),
           SizedBox(
-            height: 25,
+            height: 25.h,
           ),
           Pinput(
             defaultPinTheme: defaultPinTheme,
@@ -123,11 +125,11 @@ class _MyOtpState extends State<MyOtp> {
             },
           ),
           SizedBox(
-            height: 15,
+            height: 15.h,
           ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
-            height: 45,
+            height: 45.h,
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () async {

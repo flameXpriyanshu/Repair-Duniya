@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:repair_duniya/Model_Screens/Buy_Appliances/product_card.dart';
 
 class Buy_appliances extends StatelessWidget {
@@ -23,12 +24,13 @@ class Buy_appliances extends StatelessWidget {
     "Havells(3L)",
     "Bajaj Splendora(3L)",
     "LG 7Kg 5star",
-    "Voltas 1.5 Ton 3star,Inverter Split AC",
+    "Voltas 1.5 Ton 3star,\nInverter Split AC",
     "Havells(3L)"
   ];
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context);
     return Scaffold(
       body: SingleChildScrollView(
           child: Padding(
@@ -42,7 +44,7 @@ class Buy_appliances extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    width: 370,
+                    width: 300.w,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
@@ -92,7 +94,7 @@ class Buy_appliances extends StatelessWidget {
                         child: Text(
                           CatList[i],
                           style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 16.sp,
                             color: CatList[i] == "All"
                                 ? Color.fromARGB(255, 244, 241, 241)
                                 : Colors.grey.shade500,
