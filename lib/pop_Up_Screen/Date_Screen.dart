@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:repair_duniya/pop_Up_Screen/Show_Date.dart';
+
 import 'package:repair_duniya/pop_Up_Screen/address.dart';
 import 'package:intl/intl.dart';
 
@@ -108,6 +108,16 @@ class _DateBottomSheetState extends State<DateBottomSheet>
                 topLeft: Radius.circular(10), topRight: Radius.circular(10))),
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
           Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 6,
+              width: 50,
+              decoration: BoxDecoration(
+                  color: Colors.grey.shade300,
+                  borderRadius: BorderRadius.circular(10)),
+            ),
+          ),
+          Padding(
             padding: const EdgeInsets.only(top: 15),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -117,7 +127,6 @@ class _DateBottomSheetState extends State<DateBottomSheet>
                   "Select Date",
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
                 ),
-                //changes
                 Container(
                   height: 60,
                   child: Image.asset(
@@ -152,7 +161,6 @@ class _DateBottomSheetState extends State<DateBottomSheet>
                   "Select Timing",
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
                 ),
-                //changes
                 Container(
                   height: 70,
                   child: Image.asset(
@@ -182,147 +190,30 @@ class _DateBottomSheetState extends State<DateBottomSheet>
               button('Evening')
             ],
           ),
-          // Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-          //   Padding(
-          //     padding: const EdgeInsets.symmetric(vertical: 20),
-          //     child: SizedBox(
-          //       height: 45,
-          //       width: 110,
-          //       child: OutlinedButton(
-          //           style: ButtonStyle(
-          //             backgroundColor: _hasBeenPressed
-          //                 ? MaterialStateProperty.all(Colors.black)
-          //                 : MaterialStateProperty.all(Colors.white),
-          //             shape: MaterialStateProperty.all(RoundedRectangleBorder(
-          //               borderRadius: BorderRadius.circular(30.0),
-          //               side: BorderSide(width: 10.0, color: Colors.black),
-          //             )),
-          //             // overlayColor: MaterialStateProperty.resolveWith<Color?>(
-          //             //   (Set<MaterialState> states) {
-          //             //     if (states.contains(MaterialState.pressed))
-          //             //       return Colors.black; //<-- SEE HERE
-          //             //     return Colors.white; // Defer to the widget's default.
-          //             //   },
-          //             // ),
-          //           ),
-          //           onPressed: () {
-          //             setState(() {
-          //               _hasBeenPressed = !_hasBeenPressed;
-          //             });
-          //             // ButtonStyle(
-          //             //   backgroundColor:
-          //             //       MaterialStateProperty.all(Colors.black),
-          //             //   shape: MaterialStateProperty.all(RoundedRectangleBorder(
-          //             //     borderRadius: BorderRadius.circular(30.0),
-          //             //     side: BorderSide(width: 10.0, color: Colors.black),
-          //             //   )),
-          //             // );
-          //           },
-          //           child: Text(
-          //             "Morning",
-          //             style: TextStyle(
-          //               fontSize: 15,
-          //               color: _hasBeenPressed ? Colors.white : Colors.black,
-          //             ),
-          //           )),
-          //     ),
-          //   ),
-          //   Padding(
-          //     padding: const EdgeInsets.symmetric(vertical: 20),
-          //     child: SizedBox(
-          //       height: 45,
-          //       width: 110,
-          //       child: OutlinedButton(
-          //           style: ButtonStyle(
-          //             backgroundColor: _hasBeenPressed
-          //                 ? MaterialStateProperty.all(Colors.black)
-          //                 : MaterialStateProperty.all(Colors.white),
-          //             shape: MaterialStateProperty.all(RoundedRectangleBorder(
-          //               borderRadius: BorderRadius.circular(30.0),
-          //               side: BorderSide(width: 10.0, color: Colors.black),
-          //             )),
-          //           ),
-          //           onPressed: () {
-          //             setState(() {
-          //               _hasBeenPressed = !_hasBeenPressed;
-          //             });
-          //             // ButtonStyle(
-          //             //   backgroundColor: MaterialStateProperty.all(Colors.blue),
-          //             //   shape: MaterialStateProperty.all(RoundedRectangleBorder(
-          //             //     borderRadius: BorderRadius.circular(30.0),
-          //             //     side: BorderSide(width: 10.0, color: Colors.black),
-          //             //   )),
-          //             // );
-          //           },
-          //           child: Text(
-          //             "Afternoon",
-          //             style: TextStyle(
-          //               fontSize: 15,
-          //               color: _hasBeenPressed ? Colors.white : Colors.black,
-          //             ),
-          //           )),
-          //     ),
-          //   ),
 
-          //   Padding(
-          //     padding: const EdgeInsets.symmetric(vertical: 20),
-          //     child: SizedBox(
-          //       height: 50,
-          //       width: 110,
-          //       child: OutlinedButton(
-          //           style: ButtonStyle(
-          //             backgroundColor: _hasBeenPressed
-          //                 ? MaterialStateProperty.all(Colors.black)
-          //                 : MaterialStateProperty.all(Colors.white),
-          //             shape: MaterialStateProperty.all(RoundedRectangleBorder(
-          //               borderRadius: BorderRadius.circular(30.0),
-          //               side: BorderSide(width: 10.0, color: Colors.black),
-          //             )),
-          //           ),
-          //           onPressed: () {
-          //             setState(() {
-          //               _hasBeenPressed = !_hasBeenPressed;
-          //             });
-          //             // ButtonStyle(
-          //             //   backgroundColor: MaterialStateProperty.all(Colors.blue),
-          //             //   shape: MaterialStateProperty.all(RoundedRectangleBorder(
-          //             //     borderRadius: BorderRadius.circular(30.0),
-          //             //     side: BorderSide(width: 10.0, color: Colors.black),
-          //             //   )),
-          //             // );
-          //           },
-          //           child: Text(
-          //             "Evening",
-          //             style: TextStyle(
-          //               fontSize: 15,
-          //               color: _hasBeenPressed ? Colors.white : Colors.black,
-          //             ),
-          //           )),
-          //     ),
-          //   ),
-          // ]),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-            child: Center(
-              child: Text(
-                "Our Expert will arrive on your appointment Day and Time",
-                style: TextStyle(
-                    fontSize: 20,
-                    color: Colors.grey.shade600,
-                    fontWeight: FontWeight.w500),
+          Stack(children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+              child: Center(
+                child: Text(
+                  "Our Expert will arrive on your appointment Day and Time",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.grey.shade600,
+                      fontWeight: FontWeight.w500),
+                ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: Align(
-              alignment: Alignment.bottomRight,
+            Container(
+              alignment: Alignment.topRight,
+              padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
               child: IconButton(
-                  icon: Image.asset('assets/right-arrow.png'),
-                  color: Colors.black,
-                  onPressed: toggleContent),
+                icon: Icon(Icons.arrow_forward_outlined),
+                iconSize: 45,
+                onPressed: toggleContent,
+              ),
             ),
-          )
+          ]),
         ]),
       ),
     );

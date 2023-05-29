@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:repair_duniya/Model_Screens/Buy_Appliances/buy_appliances.dart';
 import 'package:repair_duniya/Model_Screens/Home_Screen/drawer.dart';
 import 'package:repair_duniya/Model_Screens/Home_boarding_Screen/home_board.dart';
 import 'package:repair_duniya/Model_Screens/Subscription/subscriptionView.dart';
@@ -43,7 +44,7 @@ void main() async {
       'home_board': (context) => home_board(),
       'subscriptionView': (context) => SubscriptionView(),
     },
-    home: Myhome(),
+    home: Buy_appliances(),
     debugShowCheckedModeBanner: false,
   ));
 }

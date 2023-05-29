@@ -47,11 +47,12 @@ dependencies:
   location: ^4.4.0
   flutter_polyline_points: ^1.0.0
   google_maps_flutter: ^2.1.7
-  flutter_svg: ^1.1.5
+  flutter_svg: ^2.0.6
   http: ^0.13.5 
   table_calendar: ^3.0.9
   flutter_screenutil: ^5.5.3
   font_awesome_flutter: ^10.4.0
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_test:
@@ -80,6 +81,7 @@ flutter:
    - assets/
    - animations/
    - screen_assets/
+
   #  - images/p1.jpg
   #  - images/p2.jpg
   #  - images/p3.jpg
