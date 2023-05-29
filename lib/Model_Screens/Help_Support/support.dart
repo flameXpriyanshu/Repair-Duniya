@@ -174,7 +174,7 @@ class Support extends StatelessWidget {
                   child: Text('FREQUENTLY ASKED QUESTIONS',
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
-                          fontSize: 18,
+                          fontSize: 18.sp,
                           letterSpacing: 0.1)),
                 )),
             Positioned(
@@ -273,12 +273,12 @@ Widget _buildList(
       leading: Text(
         num,
         style: TextStyle(
-            color: Colors.black, fontWeight: FontWeight.w500, fontSize: 20),
+            color: Colors.black, fontWeight: FontWeight.w500, fontSize: 20.sp),
       ),
       title: Text(
         title,
         style: TextStyle(
-            color: Colors.black87, fontWeight: FontWeight.w500, fontSize: 19),
+            color: Colors.black87, fontWeight: FontWeight.w500, fontSize: 19.sp),
       ),
       children: [
         ListTile(
