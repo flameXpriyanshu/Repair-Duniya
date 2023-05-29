@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+
+import 'package:repair_duniya/pop_Up_Screen/address.dart';
+
 import 'package:intl/intl.dart';
 import 'package:repair_duniya/pop_Up_Screen/address.dart';
 
@@ -55,6 +58,32 @@ class _DateBottomSheetState extends State<DateBottomSheet>
                 topLeft: Radius.circular(10), topRight: Radius.circular(10))),
         child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
           Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 6,
+              width: 50,
+              decoration: BoxDecoration(
+                  color: Colors.grey.shade300,
+                  borderRadius: BorderRadius.circular(10)),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 15),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  "Select Date",
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+                ),
+                Container(
+                  height: 60,
+                  child: Image.asset(
+                      'assets/3d-render-calendar-page-with-green-tick-icon_107791-15944-removebg-preview.png'),
+                ),
+              ],
+
             padding: const EdgeInsets.only(top: 5),
             child: Text(
               "Date",
@@ -84,6 +113,40 @@ class _DateBottomSheetState extends State<DateBottomSheet>
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
             ),
           ),
+          ToggleButtons(
+            direction: Axis.horizontal,
+            onPressed: (index) {
+              setState(() {
+                // The button that is tapped is set to true, and the others to false.
+                for (int i = 0; i < _selectedTime.length; i++) {
+                  _selectedTime[i] = i == index;
+                }
+              });
+            },
+            borderRadius: BorderRadius.circular(10),
+            selectedColor: Colors.white,
+            fillColor: Colors.blue,
+            color: Colors.black,
+            isSelected: _selectedTime,
+            children: [
+              button('Morning'),
+              button('Afternoon'),
+              button('Evening')
+            ],
+          ),
+
+          Stack(children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+              child: Center(
+                child: Text(
+                  "Our Expert will arrive on your appointment Day and Time",
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.grey.shade600,
+                      fontWeight: FontWeight.w500),
+                ),
+
           Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 20),
@@ -187,17 +250,16 @@ class _DateBottomSheetState extends State<DateBottomSheet>
                     fontWeight: FontWeight.w500),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 10),
-            child: Align(
-              alignment: Alignment.bottomRight,
+            Container(
+              alignment: Alignment.topRight,
+              padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
               child: IconButton(
-                  icon: Image.asset('assets/right-arrow.png'),
-                  color: Colors.black,
-                  onPressed: toggleContent),
+                icon: Icon(Icons.arrow_forward_outlined),
+                iconSize: 45,
+                onPressed: toggleContent,
+              ),
             ),
-          )
+          ]),
         ]),
       ),
     );

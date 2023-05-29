@@ -19,6 +19,7 @@ import 'package:repair_duniya/Model_Screens/Login_All_Screen/otp.dart';
 import 'package:repair_duniya/Model_Screens/Onboarding_Screen/page_indicator.dart';
 import 'package:repair_duniya/pop_Up_Screen/Date_Screen.dart';
 import 'package:repair_duniya/pop_Up_Screen/Describe_Screen.dart';
+
 import 'Model_Screens/Onboarding_Screen/data.dart';
 import 'Model_Screens/Home_Screen/home.dart';
 import 'Model_Screens/Login_All_Screen/phone.dart';
@@ -43,7 +44,7 @@ void main() async {
       'home_board': (context) => home_board(),
       'subscriptionView': (context) => SubscriptionView(),
     },
-    home: Buy_appliances(),
+    home: Myhome(),
     debugShowCheckedModeBanner: false,
   ));
 }

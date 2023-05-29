@@ -56,6 +56,16 @@ class _ModalBotoomSheetState extends State<ModalBotoomSheet> {
                     topRight: Radius.circular(10))),
             child: Column(children: [
               Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 6,
+                  width: 50,
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade300,
+                      borderRadius: BorderRadius.circular(10)),
+                ),
+              ),
+              Padding(
                 padding: const EdgeInsets.symmetric(vertical: 35),
                 child: Center(
                     child: Text(
