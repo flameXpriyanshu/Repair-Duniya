@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class custom_Bottom_Sheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context);
     return Container(
       padding: EdgeInsets.only(left: 20, right: 20, bottom: 30),
       decoration: BoxDecoration(
@@ -13,6 +15,18 @@ class custom_Bottom_Sheet extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(
+            height: 10.h,
+          ),
+          Container(
+            height: 5.h,
+            width: 50.w,
+            decoration: BoxDecoration(
+                color: Color.fromARGB(255, 223, 221, 221),
+                borderRadius: BorderRadius.circular(10)),
+          ),
+          SizedBox(
+            height: 20.h,
+
             height: 4,
           ),
           Center(
@@ -30,10 +44,10 @@ class custom_Bottom_Sheet extends StatelessWidget {
           Row(children: [
             Text(
               "Total Quantity",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w500),
             ),
             SizedBox(
-              width: 20,
+              width: 20.w,
             ),
             Container(
               padding: EdgeInsets.all(8),
@@ -47,14 +61,14 @@ class custom_Bottom_Sheet extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: 8,
+              width: 8.w,
             ),
             Text(
               "01",
-              style: TextStyle(fontSize: 17, fontWeight: FontWeight.w400),
+              style: TextStyle(fontSize: 17.sp, fontWeight: FontWeight.w400),
             ),
             SizedBox(
-              height: 5,
+              height: 5.h,
             ),
             Container(
               padding: EdgeInsets.all(8),
@@ -69,23 +83,23 @@ class custom_Bottom_Sheet extends StatelessWidget {
             ),
           ]),
           SizedBox(
-            height: 40,
+            height: 40.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 "Total Payment",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w600),
               ),
               Text(
                 "Rate",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.w600),
               )
             ],
           ),
           SizedBox(
-            height: 30,
+            height: 30.h,
           ),
           InkWell(
             onTap: () {},
@@ -98,7 +112,7 @@ class custom_Bottom_Sheet extends StatelessWidget {
               child: Text(
                 "Checkout",
                 style: TextStyle(
-                  fontSize: 17,
+                  fontSize: 17.sp,
                   fontWeight: FontWeight.w600,
                   letterSpacing: 1,
                   color: Colors.white.withOpacity(0.9),

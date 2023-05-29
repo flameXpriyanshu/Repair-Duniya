@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+//import 'package:repair_duniya/pop_Up_Screen/Show_Date.dart';
 
 import 'package:repair_duniya/pop_Up_Screen/address.dart';
 
@@ -47,6 +49,56 @@ class _DateBottomSheetState extends State<DateBottomSheet>
     });
   }
 
+  Widget button(String Time) {
+    return Padding(
+        padding: const EdgeInsets.symmetric(vertical: 20),
+        child: Container(
+            height: 20.h,
+            width: 110.w,
+            // child: OutlinedButton(
+            //     style: ButtonStyle(
+            // backgroundColor: _hasBeenPressed
+            //     ? MaterialStateProperty.all(Colors.black)
+            //     : MaterialStateProperty.all(Colors.white),
+            //   shape: MaterialStateProperty.all(RoundedRectangleBorder(
+            //     borderRadius: BorderRadius.circular(30.0),
+            //     side: BorderSide(width: 10.0, color: Colors.black),
+            //   )),
+            //   // overlayColor: MaterialStateProperty.resolveWith<Color?>(
+            //   //   (Set<MaterialState> states) {
+            //   //     if (states.contains(MaterialState.pressed))
+            //   //       return Colors.black; //<-- SEE HERE
+            //   //     return Colors.white; // Defer to the widget's default.
+            //   //   },
+            //   // ),
+            // ),
+            // onPressed: () {
+            //   // setState(() {
+            //   //   // _hasBeenPressed = !_hasBeenPressed;
+            //   // });
+            //   // ButtonStyle(
+            //   //   backgroundColor:
+            //   //       MaterialStateProperty.all(Colors.black),
+            //   //   shape: MaterialStateProperty.all(RoundedRectangleBorder(
+            //   //     borderRadius: BorderRadius.circular(30.0),
+            //   //     side: BorderSide(width: 10.0, color: Colors.black),
+            //   //   )),
+            //   // );
+            // },
+            child: Center(
+              child: Text(
+                Time,
+                style: TextStyle(
+                  fontSize: 15.sp,
+                  // color: _hasBeenPressed ? Colors.white : Colors.black,
+                ),
+              ),
+            )));
+    //   ),
+    // );
+  }
+
+
   Widget Date_sheet(context) {
     final TextEditingController _Textcontroller = TextEditingController();
     return SlideTransition(
@@ -75,10 +127,10 @@ class _DateBottomSheetState extends State<DateBottomSheet>
               children: [
                 Text(
                   "Select Date",
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+                  style: TextStyle(fontSize: 25.sp, fontWeight: FontWeight.w500),
                 ),
                 Container(
-                  height: 60,
+                  height: 60.h,
                   child: Image.asset(
                       'assets/3d-render-calendar-page-with-green-tick-icon_107791-15944-removebg-preview.png'),
                 ),
@@ -107,10 +159,27 @@ class _DateBottomSheetState extends State<DateBottomSheet>
               ),
           SizedBox(height: 18),
           Padding(
+            padding: const EdgeInsets.symmetric(vertical: 0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  "Select Timing",
+                  style: TextStyle(fontSize: 25.sp, fontWeight: FontWeight.w500),
+                ),
+                Container(
+                  height: 70.h,
+                  child: Image.asset(
+                      'assets/alarm-clock-concept-illustration_114360-14276-removebg-preview.png'),
+                )
+              ],
+
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: Text(
               "Select Timing",
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
+
             ),
           ),
           ToggleButtons(
@@ -245,6 +314,9 @@ class _DateBottomSheetState extends State<DateBottomSheet>
               child: Text(
                 "Our Expert will arrive on your appointment Day and Time",
                 style: TextStyle(
+
+                    fontSize: 20.sp,
+
                     fontSize: 25,
                     color: Colors.grey.shade600,
                     fontWeight: FontWeight.w500),
@@ -305,6 +377,96 @@ class _dateTimepickerState extends State<dateTimepicker> {
 
   @override
   Widget build(BuildContext context) {
+    return Column(mainAxisSize: MainAxisSize.min, children: [
+      _selectedDate == null
+          ? Text(
+              // DateFormat.yMd().format(_selectedDate),
+
+              'No date Choosen',
+              // : dateFormat.format(_selectedDate),
+              style: TextStyle(fontSize: 20.sp, color: Colors.black),
+            )
+          // : GridView.builder(
+          //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          //         crossAxisCount: 3),
+          //     shrinkWrap: true,
+          //     // scrollDirection: Axis.horizontal,
+          //     physics: NeverScrollableScrollPhysics(),
+          //     itemCount: 3,
+          //     itemBuilder: (context, index) => Padding(
+          //       padding: EdgeInsets.all(10),
+          //       child: Container(
+          //         height: 20,
+          //         width: 20,
+          //         child: ElevatedButton(
+          //           style: ButtonStyle(
+          //               backgroundColor:
+          //                   MaterialStateProperty.all(Colors.white),
+          //               shape:
+          //                   MaterialStateProperty.all(RoundedRectangleBorder(
+          //                 borderRadius: BorderRadius.circular(30.0),
+          //                 // side: BorderSide(width: 10.0, color: Colors.white),
+          //               ))),
+          //           onPressed: () {},
+          //           child: Column(
+          //             mainAxisAlignment: MainAxisAlignment.center,
+          //             children: [
+          //               // Text('${FirstDate.day + index}'),
+          //               Text(
+          //                 DateFormat('EEEE').format(
+          //                     FirstDate.add(Duration(days: index + 1))),
+          //                 style: TextStyle(color: Colors.black),
+          //               ),
+          //               Text(
+          //                 dateFormat.format(
+          //                     FirstDate.add(Duration(days: index + 1))),
+          //                 style: TextStyle(color: Colors.black, fontSize: 30),
+          //               )
+          //             ],
+          //           ),
+          //         ),
+          //       ),
+          //     ),
+          //   ),
+
+          // children: List.generate(
+          //     LastDate.day,
+          //     (index) => Padding(
+          //           padding: EdgeInsets.all(8),
+          //           child: Column(mainAxisSize: MainAxisSize.min, children: [
+          //             Text(
+          //               "${index + 1}",
+          //             ),
+          //             () {
+          //               final currentDate =
+          //                   FirstDate.add(Duration(days: index + 1));
+
+          //               final dateName = DateFormat('E').format(currentDate);
+          //               return Text(dateName);
+          //             }()
+          //           ]),
+          //         )),
+
+          : Container(
+              width: 150.w,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  minimumSize: Size.fromHeight(40),
+                  primary: Colors.grey.shade300,
+                ),
+                child: Container(
+                  child: Text(
+                    dateFormat.format(_selectedDate),
+                    style: TextStyle(fontSize: 20.sp, color: Colors.white),
+                  ),
+                ),
+                onPressed: () {
+                  _showDatePicker(context);
+                },
+              ),
+            )
+
     return Column(children: [
       Text(
         _selectedDate == null

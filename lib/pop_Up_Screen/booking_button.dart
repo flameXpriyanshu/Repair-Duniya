@@ -1,6 +1,7 @@
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:repair_duniya/Model_Screens/Subscription/subscriptionView.dart';
 import 'package:repair_duniya/pop_Up_Screen/Date_Screen.dart';
 import '../pop_Up_Screen/Install_Screen.dart';
@@ -12,6 +13,32 @@ class bookingButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool IsSubscribed = false;
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(right: 0, left: 7),
+          child: Row(
+            children: [
+              SizedBox(
+                height: 50.h,
+                width: 160.w,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  child: ElevatedButton(
+                      onPressed: () {
+                        // Navigator.of(context).push(MaterialPageRoute(
+                        //   builder: (context) => MySub(),
+                        // ));
+                      },
+                      style: ButtonStyle(
+                        overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                          (Set<MaterialState> states) {
+                            if (states.contains(MaterialState.pressed))
+                              return Color.fromARGB(255, 63, 69, 145);
+                            return Colors
+                                .blue; // Defer to the widget's default.
+                          },
+
     return Container(
       child: Column(
         children: [
@@ -45,6 +72,32 @@ class bookingButton extends StatelessWidget {
                         child: Text("Urgent Booking")),
                   ),
                 ),
+              ),
+              SizedBox(
+                width: 15.w,
+              ),
+              SizedBox(
+                height: 50.h,
+                width: 177.5.w,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  child: ElevatedButton(
+                      onPressed: () {
+                        showCustomModalBottomSheet(context);
+                        // if (IsSubscribed) {
+                        //   showCustomModalBottomSheet(context);
+                        // }
+                        // MySub();
+                      },
+                      style: ButtonStyle(
+                        overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                          (Set<MaterialState> states) {
+                            if (states.contains(MaterialState.pressed))
+                              return Color.fromARGB(255, 63, 69, 145);
+                            return Colors
+                                .blue; // Defer to the widget's default.
+                          },
+
                 // SizedBox(
                 //   width: 15,
                 // ),

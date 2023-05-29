@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:repair_duniya/pop_Up_Screen/Date_Screen.dart';
 
 class modalBottomSheet extends StatefulWidget {
@@ -64,8 +65,8 @@ class _modalBottomSheetState extends State<modalBottomSheet>
           child: Column(
             children: [
               Container(
-                height: 6,
-                width: 50,
+                height: 4.h,
+                width: 50.w,
                 decoration: BoxDecoration(
                     color: Colors.grey.shade300,
                     borderRadius: BorderRadius.circular(10)),
@@ -80,7 +81,7 @@ class _modalBottomSheetState extends State<modalBottomSheet>
                         "Describe Repair",
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: 27,
+                          fontSize: 27.sp,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -90,13 +91,13 @@ class _modalBottomSheetState extends State<modalBottomSheet>
                     padding: const EdgeInsets.only(left: 25.0, right: 10),
                     child: Image.asset(
                       'assets/iconn.png',
-                      height: 75,
+                      height: 75.h,
                     ),
                   ),
                 ],
               ),
               Container(
-                height: 200,
+                height: 190.h,
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: TextFormField(
                   minLines: 8,
@@ -108,7 +109,7 @@ class _modalBottomSheetState extends State<modalBottomSheet>
                     hintText: 'My Air Conditioner is not working...',
                     hintStyle: TextStyle(
                       color: Colors.black54,
-                      fontSize: 17,
+                      fontSize: 17.sp,
                       fontStyle: FontStyle.italic,
                     ),
                     enabledBorder: OutlineInputBorder(

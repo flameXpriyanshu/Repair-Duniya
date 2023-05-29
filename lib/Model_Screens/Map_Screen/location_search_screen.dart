@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:repair_duniya/components.dart/location_list_tile.dart';
 import 'package:repair_duniya/components.dart/network_utility.dart';
@@ -50,8 +51,8 @@ class _SearchLocationScreenState extends State<SearchLocationScreen> {
             backgroundColor: secondaryColor10LightTheme,
             child: SvgPicture.asset(
               "assets/location.svg",
-              height: 20,
-              width: 5,
+              height: 20.h,
+              width: 5.w,
               color: secondaryColor40LightTheme,
               fit: BoxFit.fill,
             ),
@@ -97,7 +98,7 @@ class _SearchLocationScreenState extends State<SearchLocationScreen> {
                     borderSide: BorderSide(color: Colors.grey),
                   ),
                   hintText: "Search your location",
-                  hintStyle: TextStyle(fontSize: 18),
+                  hintStyle: TextStyle(fontSize: 18.sp),
                   prefixIcon: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     child: SvgPicture.asset(
@@ -117,13 +118,13 @@ class _SearchLocationScreenState extends State<SearchLocationScreen> {
           Padding(
             padding: const EdgeInsets.all(defaultPadding),
             child: SizedBox(
-              height: 40,
+              height: 40.h,
               width: double.infinity,
               child: ElevatedButton.icon(
                 onPressed: () {},
                 icon: SvgPicture.asset(
                   "assets/location.svg",
-                  height: 16,
+                  height: 16.h,
                 ),
                 label: const Text("Use my Current Location"),
                 style: ElevatedButton.styleFrom(

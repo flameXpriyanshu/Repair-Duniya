@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:repair_duniya/Model_Screens/Login_All_Screen/otp.dart';
 import 'package:repair_duniya/Model_Screens/Login_All_Screen/phone.dart';
 
@@ -28,11 +29,12 @@ class _MyPhoneState extends State<MyPhone> {
   String CountryCode = '+91';
   int _current = 0;
   Widget build(BuildContext context) {
+    ScreenUtil.init(context);
     final List<Widget> imgSlider = widget.imgList
         .map(
           (item) => Container(
-            height: 500,
-            width: 1000,
+            height: 500.h,
+            width: 1000.w,
             child: Stack(
               children: [
                 Image.asset(item, fit: BoxFit.fill, width: double.infinity),
@@ -64,8 +66,8 @@ class _MyPhoneState extends State<MyPhone> {
               children: widget.imgList.map((url) {
                 int index = widget.imgList.indexOf(url);
                 return Container(
-                  width: 8,
-                  height: 8,
+                  width: 8.w,
+                  height: 8.h,
                   margin: EdgeInsets.symmetric(
                     vertical: 10,
                     horizontal: 3,
@@ -77,43 +79,43 @@ class _MyPhoneState extends State<MyPhone> {
               }).toList(),
             ),
             SizedBox(
-              height: 7,
+              height: 7.h,
             ),
             Text(
               'Lets get started',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
               textAlign: TextAlign.left,
             ),
             SizedBox(
-              height: 7,
+              height: 7.h,
             ),
             Text(
               'Verify your account using OTP',
-              style: TextStyle(fontSize: 14),
+              style: TextStyle(fontSize: 14.sp),
             ),
             SizedBox(
-              height: 5,
+              height: 5.h,
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-              height: 55,
+              height: 55.h,
               decoration: BoxDecoration(
                   border: Border.all(width: 1, color: Colors.grey),
                   borderRadius: BorderRadius.circular(10)),
               child: Row(
                 children: [
                   SizedBox(
-                    width: 10,
+                    width: 10.w,
                   ),
                   SizedBox(
-                    width: 50,
+                    width: 50.w,
                     child: TextButton(
                         onPressed: () {
                           showCountryPicker(
                             context: context,
                             countryListTheme: CountryListThemeData(
                                 flagSize: 20,
-                                textStyle: TextStyle(fontSize: 10),
+                                textStyle: TextStyle(fontSize: 10.sp),
                                 inputDecoration: InputDecoration(
                                   hintText: "Start Typing to Search",
                                   labelText: 'Search',
@@ -129,7 +131,7 @@ class _MyPhoneState extends State<MyPhone> {
                         child: Text(CountryCode.toString())),
                   ),
                   SizedBox(
-                    width: 10,
+                    width: 10.w,
                   ),
                   Expanded(
                     child: TextField(
@@ -147,7 +149,7 @@ class _MyPhoneState extends State<MyPhone> {
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-              height: 45,
+              height: 45.h,
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () async {
