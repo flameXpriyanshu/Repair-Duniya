@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:repair_duniya/icon_Screen.dart/ac.dart';
 import 'package:repair_duniya/icon_Screen.dart/fan.dart';
+import 'package:repair_duniya/icon_Screen.dart/motorcycle.dart';
 import 'package:repair_duniya/icon_Screen.dart/oven.dart';
 import 'package:repair_duniya/icon_Screen.dart/painter.dart';
 import 'package:repair_duniya/icon_Screen.dart/refrigerator.dart';
 import 'package:repair_duniya/icon_Screen.dart/salon.dart';
+import 'package:repair_duniya/icon_Screen.dart/tv.dart';
 import 'package:repair_duniya/icon_Screen.dart/washer.dart';
+// import 'package:Repair-Duniya/lib/icon_Screen.dart/tv.dart';
+// import 'package:repair-duniya/icon_Screen.dart/tv.dart';
 
 Widget homeIconText(String text) {
   return Text(text,
@@ -28,7 +32,7 @@ Widget AC(BuildContext context) {
                 fit: BoxFit.scaleDown,
               ),
               borderRadius: BorderRadius.circular(7),
-              border: Border.all(width: 1, color: Colors.grey),
+              // border: Border.all(width: 1, color: Colors.grey),
               color: Colors.white,
             ),
             child: InkWell(
@@ -62,7 +66,7 @@ Widget Washer(BuildContext context) {
             width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
-              border: Border.all(width: 1, color: Colors.grey),
+              // border: Border.all(width: 1, color: Colors.grey),
               color: Colors.white,
               image: DecorationImage(
                   image: ExactAssetImage('assets/washing-machine.png'),
@@ -99,7 +103,7 @@ Widget Oven(BuildContext context) {
             width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
-              border: Border.all(width: 1, color: Colors.grey),
+              // border: Border.all(width: 1, color: Colors.grey),
               color: Colors.white,
               image: DecorationImage(
                 image: ExactAssetImage('assets/oven.png'),
@@ -137,7 +141,7 @@ Widget Refrigerator(BuildContext context) {
             width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
-              border: Border.all(width: 1, color: Colors.grey),
+              // border: Border.all(width: 1, color: Colors.grey),
               color: Colors.white,
               image: DecorationImage(
                 image: ExactAssetImage('assets/refrigerator.png'),
@@ -175,7 +179,7 @@ Widget Fan(BuildContext context) {
             width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
-              border: Border.all(width: 1, color: Colors.grey),
+              // border: Border.all(width: 1, color: Colors.grey),
               color: Colors.white,
               image: DecorationImage(
                 image: ExactAssetImage('assets/Fan.png'),
@@ -213,7 +217,7 @@ Widget Motercycle(BuildContext context) {
             width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
-              border: Border.all(width: 1, color: Colors.grey),
+              // border: Border.all(width: 1, color: Colors.grey),
               color: Colors.white,
               image: DecorationImage(
                 image: ExactAssetImage('assets/motorbike.png'),
@@ -224,7 +228,7 @@ Widget Motercycle(BuildContext context) {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MyAc()),
+                  MaterialPageRoute(builder: (context) => Mybike()),
                 );
               },
             ),
@@ -251,7 +255,7 @@ Widget Television(BuildContext context) {
             width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
-              border: Border.all(width: 1, color: Colors.grey),
+              // border: Border.all(width: 1, color: Colors.grey),
               color: Colors.white,
               image: DecorationImage(
                 image: ExactAssetImage('assets/tv.png'),
@@ -259,7 +263,12 @@ Widget Television(BuildContext context) {
               ),
             ),
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyTv()),
+                );
+              },
             ),
           ),
         ),
@@ -284,7 +293,7 @@ Widget More(BuildContext context) {
             width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
-              border: Border.all(width: 1, color: Colors.grey),
+              // border: Border.all(width: 1, color: Colors.grey),
               color: Colors.white,
               image: DecorationImage(
                 image: ExactAssetImage('assets/More.png'),
@@ -317,7 +326,7 @@ Widget Salon(BuildContext context) {
             width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
-              border: Border.all(width: 1, color: Colors.grey),
+              // border: Border.all(width: 1, color: Colors.grey),
               color: Colors.white,
               image: DecorationImage(
                 image: ExactAssetImage('assets/salon.png'),
@@ -355,7 +364,7 @@ Widget Painting(BuildContext context) {
             width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
-              border: Border.all(width: 1, color: Colors.grey),
+              // border: Border.all(width: 1, color: Colors.grey),
               color: Colors.white,
               image: DecorationImage(
                 image: ExactAssetImage('assets/paint.png'),
@@ -426,7 +435,7 @@ Widget More_service(BuildContext context) {
             width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
-              border: Border.all(width: 1, color: Colors.grey),
+              // border: Border.all(width: 1, color: Colors.grey),
               color: Colors.white,
               image: DecorationImage(
                 image: ExactAssetImage('assets/More.png'),

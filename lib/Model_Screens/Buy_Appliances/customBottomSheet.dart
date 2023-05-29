@@ -26,6 +26,20 @@ class custom_Bottom_Sheet extends StatelessWidget {
           ),
           SizedBox(
             height: 20.h,
+
+            height: 4,
+          ),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 0),
+              child: Image.asset(
+                'screen_assets/gift.png',
+                height: 200,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10,
           ),
           Row(children: [
             Text(
@@ -62,7 +76,7 @@ class custom_Bottom_Sheet extends StatelessWidget {
                   color: Color(0xFFF7F8FA),
                   borderRadius: BorderRadius.circular(20)),
               child: Icon(
-                CupertinoIcons.minus,
+                CupertinoIcons.plus,
                 size: 18,
                 color: Colors.redAccent,
               ),

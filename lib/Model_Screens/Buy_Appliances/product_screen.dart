@@ -6,8 +6,9 @@ import 'package:repair_duniya/Model_Screens/Buy_Appliances/customBottomSheet.dar
 
 class product_screen extends StatelessWidget {
   String img;
-
-  product_screen(this.img);
+  String title;
+  String subtitle;
+  product_screen(this.img, this.title, this.subtitle);
 
   @override
   Widget build(BuildContext context) {
@@ -47,6 +48,53 @@ class product_screen extends StatelessWidget {
                               size: 22,
                             ),
                           ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Container(
+                        padding: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(30)),
+                        child:
+                            Icon(Icons.favorite, size: 22, color: Colors.red),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 8, left: 15, right: 15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(right: 5),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              title,
+                              style: TextStyle(
+                                  fontSize: 28, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 4,
+                            ),
+                            Text(
+                              subtitle,
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w500),
+                            ),
+                          ],
                         ),
                         // InkWell(
                         //   onTap: () {
