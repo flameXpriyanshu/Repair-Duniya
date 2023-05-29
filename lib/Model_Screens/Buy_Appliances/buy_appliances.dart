@@ -5,7 +5,27 @@ class Buy_appliances extends StatelessWidget {
   Buy_appliances({super.key});
   List CatList = ["All", "Best Selling", "Offers"];
 
-  List imgList = ["Geyser_Buy", "Washing_Buy", "Ac_Buy"];
+  List imgList = [
+    "Geyser_Buy",
+    "geyser_havells(3L)",
+    "Washing_Buy",
+    "Ac_Buy",
+    "Geyser_Buy"
+  ];
+  List titleList = [
+    "Geyser",
+    "Geyser",
+    "Washing Machine",
+    "Air Conditioner",
+    "Geyser"
+  ];
+  List subList = [
+    "Havells(3L)",
+    "Bajaj Splendora(3L)",
+    "LG 7Kg 5star",
+    "Voltas 1.5 Ton 3star,Inverter Split AC",
+    "Havells(3L)"
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +37,12 @@ class Buy_appliances extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.only(right: 25),
+              padding: EdgeInsets.all(0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    width: MediaQuery.of(context).size.width / 1.5,
+                    width: 370,
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
@@ -38,17 +58,6 @@ class Buy_appliances extends StatelessWidget {
                           )),
                     ),
                   ),
-                  Container(
-                    padding: EdgeInsets.all(15),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(10)),
-                    child: Icon(
-                      Icons.notifications_none,
-                      size: 30,
-                      color: Colors.grey,
-                    ),
-                  )
                 ],
               ),
             ),
@@ -102,10 +111,10 @@ class Buy_appliances extends StatelessWidget {
                   childAspectRatio:
                       (MediaQuery.of(context).size.width - 30 - 15) / (2 * 290),
                   mainAxisSpacing: 35,
-                  crossAxisSpacing: 20),
+                  crossAxisSpacing: 5),
               itemCount: imgList.length,
               itemBuilder: (_, i) {
-                return product_card(imgList[i]);
+                return product_card(imgList[i], titleList[i], subList[i]);
                 // if (i % 2 == 0) {
                 //   return product_card(imgList[i]);
                 // }
