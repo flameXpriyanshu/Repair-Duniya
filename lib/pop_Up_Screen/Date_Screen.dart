@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 //import 'package:repair_duniya/pop_Up_Screen/Show_Date.dart';
 import 'package:repair_duniya/pop_Up_Screen/address.dart';
 import 'package:intl/intl.dart';
@@ -52,8 +53,8 @@ class _DateBottomSheetState extends State<DateBottomSheet>
     return Padding(
         padding: const EdgeInsets.symmetric(vertical: 20),
         child: Container(
-            height: 20,
-            width: 110,
+            height: 20.h,
+            width: 110.w,
             // child: OutlinedButton(
             //     style: ButtonStyle(
             // backgroundColor: _hasBeenPressed
@@ -88,7 +89,7 @@ class _DateBottomSheetState extends State<DateBottomSheet>
               child: Text(
                 Time,
                 style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 15.sp,
                   // color: _hasBeenPressed ? Colors.white : Colors.black,
                 ),
               ),
@@ -115,10 +116,10 @@ class _DateBottomSheetState extends State<DateBottomSheet>
               children: [
                 Text(
                   "Select Date",
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+                  style: TextStyle(fontSize: 25.sp, fontWeight: FontWeight.w500),
                 ),
                 Container(
-                  height: 60,
+                  height: 60.h,
                   child: Image.asset(
                       'assets/3d-render-calendar-page-with-green-tick-icon_107791-15944-removebg-preview.png'),
                 ),
@@ -149,10 +150,10 @@ class _DateBottomSheetState extends State<DateBottomSheet>
               children: [
                 Text(
                   "Select Timing",
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+                  style: TextStyle(fontSize: 25.sp, fontWeight: FontWeight.w500),
                 ),
                 Container(
-                  height: 70,
+                  height: 70.h,
                   child: Image.asset(
                       'assets/alarm-clock-concept-illustration_114360-14276-removebg-preview.png'),
                 )
@@ -305,7 +306,7 @@ class _DateBottomSheetState extends State<DateBottomSheet>
               child: Text(
                 "Our Expert will arrive on your appointment Day and Time",
                 style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     color: Colors.grey.shade600,
                     fontWeight: FontWeight.w500),
               ),
@@ -377,7 +378,7 @@ class _dateTimepickerState extends State<dateTimepicker> {
 
               'No date Choosen',
               // : dateFormat.format(_selectedDate),
-              style: TextStyle(fontSize: 20, color: Colors.black),
+              style: TextStyle(fontSize: 20.sp, color: Colors.black),
             )
           // : GridView.builder(
           //     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -441,7 +442,7 @@ class _dateTimepickerState extends State<dateTimepicker> {
           //         )),
 
           : Container(
-              width: 150,
+              width: 150.w,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
@@ -451,7 +452,7 @@ class _dateTimepickerState extends State<dateTimepicker> {
                 child: Container(
                   child: Text(
                     dateFormat.format(_selectedDate),
-                    style: TextStyle(fontSize: 20, color: Colors.white),
+                    style: TextStyle(fontSize: 20.sp, color: Colors.white),
                   ),
                 ),
                 onPressed: () {

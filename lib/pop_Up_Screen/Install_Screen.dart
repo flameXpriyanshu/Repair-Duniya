@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:repair_duniya/pop_Up_Screen/Date_Screen.dart';
 import 'package:repair_duniya/pop_Up_Screen/Describe_Screen.dart';
 
@@ -60,7 +61,7 @@ class _ModalBotoomSheetState extends State<ModalBotoomSheet> {
                 child: Center(
                     child: Text(
                   "Select Service",
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
+                  style: TextStyle(fontSize: 30.sp, fontWeight: FontWeight.w500),
                 )),
               ),
               Row(
@@ -69,8 +70,8 @@ class _ModalBotoomSheetState extends State<ModalBotoomSheet> {
                     padding:
                         const EdgeInsets.symmetric(vertical: 20, horizontal: 5),
                     child: SizedBox(
-                      height: 50,
-                      width: 170,
+                      height: 50.h,
+                      width: 170.w,
                       child: ElevatedButton(
                           style: ButtonStyle(
                               elevation: null,
@@ -122,7 +123,7 @@ class _ModalBotoomSheetState extends State<ModalBotoomSheet> {
                           child: Text(
                             "Installation",
                             style: TextStyle(
-                              fontSize: 20,
+                              fontSize: 20.sp,
                               color: Color.fromARGB(255, 158, 205, 244),
                             ),
                           )),
@@ -132,8 +133,8 @@ class _ModalBotoomSheetState extends State<ModalBotoomSheet> {
                     padding:
                         const EdgeInsets.symmetric(vertical: 20, horizontal: 5),
                     child: SizedBox(
-                      height: 50,
-                      width: 170,
+                      height: 50.h,
+                      width: 170.w,
                       child: ElevatedButton(
                           style: ButtonStyle(
                               backgroundColor:
@@ -175,7 +176,7 @@ class _ModalBotoomSheetState extends State<ModalBotoomSheet> {
 
                           child: Text(
                             "Repair",
-                            style: TextStyle(fontSize: 20, color: Colors.white),
+                            style: TextStyle(fontSize: 20.sp, color: Colors.white),
                           )),
                     ),
                   ),

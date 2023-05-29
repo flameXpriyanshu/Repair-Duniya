@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:repair_duniya/pop_Up_Screen/Date_Screen.dart';
 
 Widget Address_sheet() {
@@ -20,7 +21,7 @@ Widget Address_sheet() {
         child: Center(
             child: Text(
           "Select Address",
-          style: TextStyle(fontSize: 35, fontWeight: FontWeight.w500),
+          style: TextStyle(fontSize: 35.sp, fontWeight: FontWeight.w500),
         )),
       ),
       Padding(
