@@ -1,3 +1,4 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:repair_duniya/Model_Screens/Map_Screen/location_search_screen.dart';
 import 'package:repair_duniya/models/constant.dart';
@@ -24,11 +25,12 @@ class _homeState extends State<Myhome> {
       []; //here we will put our search items,
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context);
     final List<Widget> homeSlider = widget.homeList
         .map(
           (item) => Container(
-            height: 250,
-            width: 500,
+            height: 250.h,
+            width: 500.w,
             child: Stack(
               children: [
                 ClipRRect(
@@ -52,7 +54,7 @@ class _homeState extends State<Myhome> {
           "Home",
           style: TextStyle(
               fontFamily: "Montserrat-Black",
-              fontSize: 25,
+              fontSize: 25.sp,
               fontWeight: FontWeight.bold,
               color: Colors.black),
         ),
@@ -68,8 +70,8 @@ class _homeState extends State<Myhome> {
           },
           icon: SvgPicture.asset(
             "assets/menu-bar.svg",
-            height: 30,
-            width: 20,
+            height: 30.h,
+            width: 20.w,
           ),
         ),
         actions: [
@@ -87,7 +89,7 @@ class _homeState extends State<Myhome> {
           Padding(
             padding: EdgeInsets.only(top: 8, bottom: 10),
             child: SizedBox(
-              height: 50,
+              height: 50.h,
               width: double.infinity,
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 0),
@@ -100,18 +102,18 @@ class _homeState extends State<Myhome> {
                   },
                   icon: SvgPicture.asset(
                     "assets/location-pin1-com.svg",
-                    height: 30,
+                    height: 30.h,
                   ),
                   label: ListTile(
                     title: Text(
                       "Location",
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text(
                       "Kormangala",
                       style: TextStyle(
-                          fontSize: 13,
+                          fontSize: 13.sp,
                           fontWeight: FontWeight.w500,
                           color: Colors.grey),
                     ),
@@ -153,7 +155,7 @@ class _homeState extends State<Myhome> {
               child: Column(
                 children: [
                   TextField(
-                    style: TextStyle(color: Colors.black, fontSize: 15),
+                    style: TextStyle(color: Colors.black, fontSize: 15.sp),
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
@@ -175,7 +177,7 @@ class _homeState extends State<Myhome> {
             ),
           ),
           SizedBox(
-            height: 5,
+            height: 5.h,
           ),
           Padding(
             //Sliding Bar
@@ -203,8 +205,8 @@ class _homeState extends State<Myhome> {
                     children: widget.homeList.map((url) {
                       int index = widget.homeList.indexOf(url);
                       return Container(
-                        width: 27,
-                        height: 8,
+                        width: 27.w,
+                        height: 8.h,
                         margin: EdgeInsets.symmetric(
                           vertical: 10,
                           horizontal: 1,
@@ -233,7 +235,7 @@ class _homeState extends State<Myhome> {
             ),
           ),
           SizedBox(
-            height: 5,
+            height: 5.h,
           ),
           Container(
             color: Colors.white,
@@ -268,7 +270,7 @@ class _homeState extends State<Myhome> {
                   ),
                 ),
                 SizedBox(
-                  height: 10,
+                  height: 10.h,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -280,7 +282,7 @@ class _homeState extends State<Myhome> {
                   ],
                 ),
                 SizedBox(
-                  height: 5,
+                  height: 5.h,
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8, vertical: 2),
@@ -289,15 +291,15 @@ class _homeState extends State<Myhome> {
                   ),
                 ),
                 SizedBox(
-                  height: 5,
+                  height: 5.h,
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8, vertical: 0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     child: Container(
-                      height: 180,
-                      width: 500,
+                      height: 180.h,
+                      width: 500.w,
                       decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(10)),
                         boxShadow: [
@@ -314,8 +316,8 @@ class _homeState extends State<Myhome> {
                       child: Stack(children: <Widget>[
                         Image.asset(
                           "assets/RoomGarden.jpg",
-                          width: 460,
-                          height: 180,
+                          width: 460.w,
+                          height: 180.h,
                           color: (Colors.black.withOpacity(0.4)),
                           fit: BoxFit.fill,
                           colorBlendMode: BlendMode.darken,
@@ -326,7 +328,7 @@ class _homeState extends State<Myhome> {
                             child: Text(
                               "Control Your Device",
                               style: TextStyle(
-                                  fontSize: 24,
+                                  fontSize: 24.sp,
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold),
                             )),
@@ -334,8 +336,8 @@ class _homeState extends State<Myhome> {
                           padding: const EdgeInsets.only(
                               top: 100.0, left: 30.0, bottom: 8.0),
                           child: Container(
-                            height: 45,
-                            width: 139,
+                            height: 45.h,
+                            width: 139.w,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               border: Border.all(color: Colors.white, width: 2),
@@ -347,7 +349,7 @@ class _homeState extends State<Myhome> {
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w400,
-                                    fontSize: 18),
+                                    fontSize: 18.sp),
                               ),
                             ),
                           ),
@@ -381,15 +383,15 @@ class _homeState extends State<Myhome> {
                   ],
                 ),
                 SizedBox(
-                  height: 35,
+                  height: 35.h,
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 8, vertical: 0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
                     child: Container(
-                      height: 180,
-                      width: 500,
+                      height: 180.h,
+                      width: 500.w,
                       decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(10)),
                         boxShadow: [
@@ -406,8 +408,8 @@ class _homeState extends State<Myhome> {
                       child: Stack(children: <Widget>[
                         Image.asset(
                           "assets/Store.jpg",
-                          width: 460,
-                          height: 180,
+                          width: 460.w,
+                          height: 180.h,
                           color: (Colors.black.withOpacity(0.4)),
                           fit: BoxFit.fill,
                           colorBlendMode: BlendMode.darken,
@@ -420,14 +422,14 @@ class _homeState extends State<Myhome> {
                               Text(
                                 'Buy New/Old',
                                 style: TextStyle(
-                                    fontSize: 24,
+                                    fontSize: 24.sp,
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),
                               ),
                               Text(
                                 'Appliance',
                                 style: TextStyle(
-                                    fontSize: 24,
+                                    fontSize: 24.sp,
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold),
                               ),
@@ -438,8 +440,8 @@ class _homeState extends State<Myhome> {
                           padding: const EdgeInsets.only(
                               top: 100.0, left: 30.0, bottom: 8.0),
                           child: Container(
-                            height: 45,
-                            width: 139,
+                            height: 45.h,
+                            width: 139.w,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               border: Border.all(color: Colors.white, width: 2),
@@ -451,13 +453,13 @@ class _homeState extends State<Myhome> {
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w400,
-                                    fontSize: 18),
+                                    fontSize: 18.sp),
                               ),
                             ),
                           ),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 20.h,
                         ),
                       ]),
                     ),
