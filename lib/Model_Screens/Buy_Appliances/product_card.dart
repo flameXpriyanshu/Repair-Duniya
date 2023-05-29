@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:repair_duniya/Model_Screens/Buy_Appliances/product_screen.dart';
 
 class product_card extends StatelessWidget {
@@ -7,6 +8,7 @@ class product_card extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context);
     return Column(
       children: [
         ClipRRect(
@@ -25,7 +27,7 @@ class product_card extends StatelessWidget {
                   child: Image.asset(
                     "screen_assets/${img}.jpg",
                     fit: BoxFit.cover,
-                    height: 230,
+                    height: 200.h,
                   ),
                 ),
               ],
@@ -33,7 +35,7 @@ class product_card extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 10,
+          height: 10.h,
         ),
         Padding(
           padding: EdgeInsets.only(left: 5),
@@ -45,7 +47,7 @@ class product_card extends StatelessWidget {
                 Text(
                   img,
                   style: TextStyle(
-                      fontSize: 19,
+                      fontSize: 19.sp,
                       fontWeight: FontWeight.w500,
                       color: Colors.black.withOpacity(0.7)),
                 ),
@@ -53,7 +55,7 @@ class product_card extends StatelessWidget {
                 Text(
                   "Rate",
                   style: TextStyle(
-                      fontSize: 19,
+                      fontSize: 19.sp,
                       fontWeight: FontWeight.w500,
                       color: Colors.red.withOpacity(0.7)),
                 ),
