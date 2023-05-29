@@ -42,17 +42,17 @@ class GiftVouchers extends StatelessWidget {
                   BulletText(
                       'After completion of your  repair gift voucher will be shared with you through the E-mail/Whatsapp'),
                   SizedBox(
-                    height: 65.h,
+                    height: 60.h,
                   ),
                   BulletText(
                       'Selected vouchers applicable, only after the repair has been done by our technicians successfully'),
                   SizedBox(
-                    height: 65,
+                    height: 60.h,
                   ),
                   BulletText(
                       'You have to use a gift voucher before its vailidity date which is mentioned on it'),
                   SizedBox(
-                    height: 46,
+                    height: 46.h,
                   ),
                   BulletText(
                       'If physical stores accept these gift vouchers tell them the voucher number, Otherwise use it digitally'),
@@ -76,7 +76,7 @@ class BulletText extends StatelessWidget {
       children: [
         Text(
           '\u{1F381}',
-          style: TextStyle(fontSize: 16.0),
+          style: TextStyle(fontSize: 16.sp),
         ),
         SizedBox(width: 8.0),
         Expanded(
@@ -84,7 +84,7 @@ class BulletText extends StatelessWidget {
             text,
             style: TextStyle(
               color: Colors.black87,
-              fontSize: 15,
+              fontSize: 15.sp,
             ),
           ),
         ),
