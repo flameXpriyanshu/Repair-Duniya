@@ -56,6 +56,16 @@ class _ModalBotoomSheetState extends State<ModalBotoomSheet> {
                     topRight: Radius.circular(10))),
             child: Column(children: [
               Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 6,
+                  width: 50,
+                  decoration: BoxDecoration(
+                      color: Colors.grey.shade300,
+                      borderRadius: BorderRadius.circular(10)),
+                ),
+              ),
+              Padding(
                 padding: const EdgeInsets.symmetric(vertical: 35),
                 child: Center(
                     child: Text(
@@ -63,34 +73,68 @@ class _ModalBotoomSheetState extends State<ModalBotoomSheet> {
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
                 )),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
-                child: SizedBox(
-                  height: 50,
-                  width: 380,
-                  child: OutlinedButton(
-                      style: ButtonStyle(
-                        shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                          side: BorderSide(width: 10.0, color: Colors.black),
-                        )),
-                        overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                          (Set<MaterialState> states) {
-                            if (states.contains(MaterialState.hovered))
-                              return Colors.blue; //<-- SEE HERE
-                            return Colors
-                                .white; // Defer to the widget's default.
-                          },
-                        ),
-                      ),
-                      onPressed: () {
-                        ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all(Colors.blue),
-                          shape:
-                              MaterialStateProperty.all(RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30.0),
-                            side: BorderSide(width: 10.0, color: Colors.black),
+              Row(
+                children: [
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 20, horizontal: 5),
+                    child: SizedBox(
+                      height: 50,
+                      width: 170,
+                      child: ElevatedButton(
+                          style: ButtonStyle(
+                              elevation: null,
+                              backgroundColor:
+                                  MaterialStateProperty.resolveWith<Color>(
+                                (Set<MaterialState> states) {
+                                  if (states.contains(MaterialState.pressed))
+                                    return Colors.blue;
+                                  return Color.fromARGB(255, 242, 241, 241);
+                                },
+                              ),
+                              shape: MaterialStateProperty.all(
+                                  RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
+                                // side: BorderSide(
+                                //     width: 10.0, color: Colors.black),
+                              )),
+                              foregroundColor:
+                                  MaterialStatePropertyAll(Colors.black)),
+                          // child: OutlinedButton(
+                          //     style: ButtonStyle(
+                          //       shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                          //         borderRadius: BorderRadius.circular(30.0),
+                          //         side: BorderSide(width: 10.0, color: Colors.black),
+                          //       )),
+                          //       overlayColor: MaterialStateProperty.resolveWith<Color?>(
+                          //         (Set<MaterialState> states) {
+                          //           if (states.contains(MaterialState.hovered))
+                          //             return Colors.blue; //<-- SEE HERE
+                          //           return Colors.black;
+                          //           // Defer to the widget's default.
+                          //         },
+                          //       ),
+                          //     ),
+                          onPressed: toggleContent_install,
+                          // Navigator.of(context).push(MaterialPageRoute(
+                          //   builder: (context) => DateBottomSheet(),
+                          // ));
+                          // ButtonStyle(
+                          //   backgroundColor:
+                          //       MaterialStateProperty.all(Colors.blue),
+                          //   shape:
+                          //       MaterialStateProperty.all(RoundedRectangleBorder(
+                          //     borderRadius: BorderRadius.circular(30.0),
+                          //     side: BorderSide(width: 10.0, color: Colors.black),
+                          //   )),
+                          // );
+
+                          child: Text(
+                            "Installation",
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Color.fromARGB(255, 158, 205, 244),
+                            ),
                           )),
                     ),
                   ),

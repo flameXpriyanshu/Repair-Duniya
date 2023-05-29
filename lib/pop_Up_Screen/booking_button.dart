@@ -12,81 +12,90 @@ class bookingButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     bool IsSubscribed = false;
-    return Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(right: 0, left: 7),
-          child: Row(
+    return Container(
+      child: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.only(top: 7),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SizedBox(
+                  height: 50,
+                  width: 160,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    child: ElevatedButton(
+                        onPressed: () {
+                          // Navigator.of(context).push(MaterialPageRoute(
+                          //   builder: (context) => MySub(),
+                          // ));
+                        },
+                        style: ButtonStyle(
+                          overlayColor:
+                              MaterialStateProperty.resolveWith<Color?>(
+                            (Set<MaterialState> states) {
+                              if (states.contains(MaterialState.pressed))
+                                return Color.fromARGB(255, 63, 69, 145);
+                              return Colors
+                                  .blue; // Defer to the widget's default.
+                            },
+                          ),
+                        ),
+                        child: Text("Urgent Booking")),
+                  ),
+                ),
+                // SizedBox(
+                //   width: 15,
+                // ),
+                SizedBox(
+                  height: 50,
+                  width: 160,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    child: ElevatedButton(
+                        onPressed: () {
+                          showCustomModalBottomSheet(context);
+                          // if (IsSubscribed) {
+                          //   showCustomModalBottomSheet(context);
+                          // }
+                          // MySub();
+                        },
+                        style: ButtonStyle(
+                          overlayColor:
+                              MaterialStateProperty.resolveWith<Color?>(
+                            (Set<MaterialState> states) {
+                              if (states.contains(MaterialState.pressed))
+                                return Color.fromARGB(255, 63, 69, 145);
+                              return Colors
+                                  .blue; // Defer to the widget's default.
+                            },
+                          ),
+                        ),
+                        child: Text("Normal Booking")),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Row(
             children: [
-              SizedBox(
-                height: 50,
-                width: 160,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  child: ElevatedButton(
-                      onPressed: () {
-                        // Navigator.of(context).push(MaterialPageRoute(
-                        //   builder: (context) => MySub(),
-                        // ));
-                      },
-                      style: ButtonStyle(
-                        overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                          (Set<MaterialState> states) {
-                            if (states.contains(MaterialState.pressed))
-                              return Color.fromARGB(255, 63, 69, 145);
-                            return Colors
-                                .blue; // Defer to the widget's default.
-                          },
-                        ),
-                      ),
-                      child: Text("Urgent Booking")),
-                ),
-              ),
-              SizedBox(
-                width: 15,
-              ),
-              SizedBox(
-                height: 50,
-                width: 177.5,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  child: ElevatedButton(
-                      onPressed: () {
-                        showCustomModalBottomSheet(context);
-                        // if (IsSubscribed) {
-                        //   showCustomModalBottomSheet(context);
-                        // }
-                        // MySub();
-                      },
-                      style: ButtonStyle(
-                        overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                          (Set<MaterialState> states) {
-                            if (states.contains(MaterialState.pressed))
-                              return Color.fromARGB(255, 63, 69, 145);
-                            return Colors
-                                .blue; // Defer to the widget's default.
-                          },
-                        ),
-                      ),
-                      child: Text("Normal Booking")),
-                ),
+              Padding(padding: EdgeInsets.only(left: 20)),
+              Container(
+                height: 40,
+                child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Why urgent booking?',
+                      style: TextStyle(
+                          color: Colors.grey.shade400,
+                          fontWeight: FontWeight.bold),
+                    )),
               ),
             ],
           ),
-        ),
-        Row(
-          children: [
-            Padding(padding: EdgeInsets.only(left: 10)),
-            TextButton(
-                onPressed: () {},
-                child: Text(
-                  'Why urgent booking?',
-                  style: TextStyle(
-                      color: Colors.grey.shade400, fontWeight: FontWeight.bold),
-                )),
-          ],
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
