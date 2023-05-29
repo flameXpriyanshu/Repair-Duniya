@@ -1,4 +1,6 @@
 import 'package:flutter_svg/svg.dart';
+import 'package:repair_duniya/Model_Screens/Buy_Appliances/buy_appliances.dart';
+import 'package:repair_duniya/Model_Screens/Control_Devices/deviceinstallView.dart';
 import 'package:repair_duniya/Model_Screens/Map_Screen/location_search_screen.dart';
 import 'package:repair_duniya/models/constant.dart';
 
@@ -330,28 +332,38 @@ class _homeState extends State<Myhome> {
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold),
                             )),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              top: 100.0, left: 30.0, bottom: 8.0),
-                          child: Container(
-                            height: 45,
-                            width: 139,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: Colors.white, width: 2),
-                              color: Color.fromARGB(255, 83, 39, 39),
-                            ),
-                            child: Center(
-                              child: Text(
+                        Positioned(
+                          top: 120,
+                          left: 120,
+                          child: SizedBox(
+                            height: 40,
+                            width: 140,
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                elevation: 1,
+                                side: const BorderSide(
+                                    width: 2, color: Colors.white),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20)),
+                                backgroundColor: Colors.pink[900],
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            DeviceInstallView()));
+                              },
+                              child: const Text(
                                 "Let's Start",
                                 style: TextStyle(
                                     color: Colors.white,
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 18),
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w400),
                               ),
                             ),
                           ),
-                        )
+                        ),
                       ]),
                     ),
                   ),
@@ -434,24 +446,34 @@ class _homeState extends State<Myhome> {
                             ],
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              top: 100.0, left: 30.0, bottom: 8.0),
-                          child: Container(
-                            height: 45,
-                            width: 139,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: Colors.white, width: 2),
-                              color: Color.fromARGB(255, 30, 43, 74),
-                            ),
-                            child: Center(
-                              child: Text(
+                        Positioned(
+                          top: 120,
+                          left: 120,
+                          child: SizedBox(
+                            height: 40,
+                            width: 140,
+                            child: ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                elevation: 1,
+                                side: const BorderSide(
+                                    width: 2, color: Colors.white),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(20)),
+                                backgroundColor: Colors.blue[900],
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            Buy_appliances()));
+                              },
+                              child: const Text(
                                 "Shop Now",
                                 style: TextStyle(
                                     color: Colors.white,
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 18),
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w400),
                               ),
                             ),
                           ),

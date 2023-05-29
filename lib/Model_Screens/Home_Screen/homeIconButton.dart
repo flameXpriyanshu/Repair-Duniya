@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:repair_duniya/icon_Screen.dart/ac.dart';
-import 'package:repair_duniya/icon_Screen.dart/fan.dart';
-import 'package:repair_duniya/icon_Screen.dart/motorcycle.dart';
-import 'package:repair_duniya/icon_Screen.dart/oven.dart';
 import 'package:repair_duniya/icon_Screen.dart/painter.dart';
-import 'package:repair_duniya/icon_Screen.dart/refrigerator.dart';
 import 'package:repair_duniya/icon_Screen.dart/salon.dart';
-import 'package:repair_duniya/icon_Screen.dart/tv.dart';
-import 'package:repair_duniya/icon_Screen.dart/washer.dart';
+import 'package:repair_duniya/icon_Screen.dart/screen_widgets.dart';
+
 // import 'package:Repair-Duniya/lib/icon_Screen.dart/tv.dart';
 // import 'package:repair-duniya/icon_Screen.dart/tv.dart';
 
@@ -38,7 +33,11 @@ Widget AC(BuildContext context) {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MyAc()),
+                  MaterialPageRoute(
+                      builder: (context) => Icons_widget(
+                          "screen_assets/ac-service-mistribabu.png",
+                          "screen_assets/ac1.jpeg",
+                          "Air Conditioner")),
                 );
               },
             ),
@@ -75,7 +74,11 @@ Widget Washer(BuildContext context) {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MyWasher()),
+                  MaterialPageRoute(
+                      builder: (context) => Icons_widget(
+                          "screen_assets/wash1.jpeg",
+                          "screen_assets/wash2.jpeg",
+                          "Washing Machine")),
                 );
               },
             ),
@@ -113,7 +116,11 @@ Widget Oven(BuildContext context) {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MyOven()),
+                  MaterialPageRoute(
+                      builder: (context) => Icons_widget(
+                          "screen_assets/oven1.jpeg",
+                          "screen_assets/oven2.jpg",
+                          "Microwave Oven")),
                 );
               },
             ),
@@ -151,7 +158,11 @@ Widget Refrigerator(BuildContext context) {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MyRefrigerator()),
+                  MaterialPageRoute(
+                      builder: (context) => Icons_widget(
+                          "screen_assets/repair-work-fridge-appliance-.jpg",
+                          "screen_assets/fridge1.jpg",
+                          "Refrigerator")),
                 );
               },
             ),
@@ -189,7 +200,11 @@ Widget Fan(BuildContext context) {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MyFan()),
+                  MaterialPageRoute(
+                      builder: (context) => Icons_widget(
+                          "screen_assets/fan1.jpg",
+                          "screen_assets/fan2.jpg",
+                          "Fan")),
                 );
               },
             ),
@@ -227,7 +242,11 @@ Widget Motercycle(BuildContext context) {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Mybike()),
+                  MaterialPageRoute(
+                      builder: (context) => Icons_widget(
+                          "screen_assets/oven1.jpeg",
+                          "screen_assets/oven2.jpg",
+                          "Motorcycle")),
                 );
               },
             ),
@@ -265,7 +284,11 @@ Widget Television(BuildContext context) {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MyTv()),
+                  MaterialPageRoute(
+                      builder: (context) => Icons_widget(
+                          "screen_assets/tv2.jpg",
+                          "screen_assets/tv3.jpg",
+                          "Television")),
                 );
               },
             ),

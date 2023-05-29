@@ -11,7 +11,7 @@ import 'package:repair_duniya/Model_Screens/Login_All_Screen/phone.dart';
 import '../../main.dart';
 
 class MyOtp extends StatefulWidget {
-  final List<String> imgList = ["assets/login-2.jpg", "assets/login-3.jpg"];
+  final List<String> imgList = ["assets/otp1.jpg", "assets/otp2.jpg"];
   MyOtp({super.key});
 
   @override

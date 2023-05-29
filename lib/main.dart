@@ -6,20 +6,14 @@ import 'package:repair_duniya/Model_Screens/Buy_Appliances/buy_appliances.dart';
 import 'package:repair_duniya/Model_Screens/Home_Screen/drawer.dart';
 import 'package:repair_duniya/Model_Screens/Home_boarding_Screen/home_board.dart';
 import 'package:repair_duniya/Model_Screens/Subscription/subscriptionView.dart';
-import 'package:repair_duniya/icon_Screen.dart/ac.dart';
-import 'package:repair_duniya/icon_Screen.dart/fan.dart';
-import 'package:repair_duniya/icon_Screen.dart/oven.dart';
 import 'package:repair_duniya/icon_Screen.dart/painter.dart';
-import 'package:repair_duniya/icon_Screen.dart/refrigerator.dart';
 import 'package:repair_duniya/icon_Screen.dart/salon.dart';
-import 'package:repair_duniya/icon_Screen.dart/washer.dart';
 import 'package:repair_duniya/Model_Screens/Map_Screen/location_search_screen.dart';
 import 'package:repair_duniya/Model_Screens/Map_Screen/order_tracking_page.dart';
 import 'package:repair_duniya/Model_Screens/Login_All_Screen/otp.dart';
 import 'package:repair_duniya/Model_Screens/Onboarding_Screen/page_indicator.dart';
 import 'package:repair_duniya/pop_Up_Screen/Date_Screen.dart';
 import 'package:repair_duniya/pop_Up_Screen/Describe_Screen.dart';
-
 import 'Model_Screens/Onboarding_Screen/data.dart';
 import 'Model_Screens/Home_Screen/home.dart';
 import 'Model_Screens/Login_All_Screen/phone.dart';
@@ -33,12 +27,7 @@ void main() async {
       'phone': (context) => MyPhone(),
       'otp': (context) => MyOtp(),
       'home': (context) => Myhome(),
-      'oven': (context) => MyOven(),
-      'ac': (context) => MyAc(),
-      'fan': (context) => MyFan(),
-      'washer': (context) => MyWasher(),
       'painter': (context) => MyPainter(),
-      'refrigerator': (context) => MyRefrigerator(),
       'salon': (context) => MySalon(),
       'location_search_screen': (context) => SearchLocationScreen(),
       'home_board': (context) => home_board(),
