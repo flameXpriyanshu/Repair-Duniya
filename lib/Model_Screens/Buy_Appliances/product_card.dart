@@ -51,7 +51,7 @@ class product_card extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                       color: Colors.black.withOpacity(0.7)),
                 ),
-                SizedBox(height: 5),
+                SizedBox(height: 5.h),
                 Text(
                   "Rate",
                   style: TextStyle(

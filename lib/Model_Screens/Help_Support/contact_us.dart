@@ -58,9 +58,9 @@ class BulletText extends StatelessWidget {
       children: [
         Text(
           '\u25cf',
-          style: TextStyle(fontSize: 16.0),
+          style: TextStyle(fontSize: 16.sp),
         ),
-        SizedBox(width: 8.0),
+        SizedBox(width: 8.w),
         Expanded(
           child: Text(
             text,
