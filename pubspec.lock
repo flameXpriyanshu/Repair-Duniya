@@ -6,6 +6,8 @@ packages:
     description:
       name: _flutterfire_internals
       sha256: "9ebe81588e666f7e2b21309f2b5653bd9642d7f27fd0a6894278d2ff40cb9481"
+
+      sha256: "8eb354cb8ebed8a9fdf63699d15deff533bc133128898afaf754926b57d611b6"
       url: "https://pub.dev"
     source: hosted
     version: "1.3.2"
@@ -85,7 +87,11 @@ packages:
     dependency: "direct main"
     description:
       name: country_picker
+
       sha256: aa975b41c8052298d227ff7ff58d6eddcad0196127445f72af7456224c9ef104
+
+      sha256: "80213f7c7a1e2138f43b0e5d20f736bb9f1ad584083eaf43a8e52f9795a7c72b"
+
       url: "https://pub.dev"
     source: hosted
     version: "2.0.20"
@@ -93,7 +99,11 @@ packages:
     dependency: transitive
     description:
       name: crypto
+
       sha256: ff625774173754681d66daaf4a448684fb04b78f902da9cb3d308c19cc5e8bab
+
+      sha256: aa274aa7774f8964e4f4f38cc994db7b6158dd36e9187aaceaddc994b35c6c67
+
       url: "https://pub.dev"
     source: hosted
     version: "3.0.3"
@@ -101,7 +111,11 @@ packages:
     dependency: transitive
     description:
       name: csslib
+
       sha256: "831883fb353c8bdc1d71979e5b342c7d88acfbc643113c14ae51e2442ea0f20f"
+
+      sha256: b36c7f7e24c0bdf1bf9a3da461c837d1de64b9f8beb190c9011d8c72a3dfd745
+
       url: "https://pub.dev"
     source: hosted
     version: "0.17.3"
@@ -125,7 +139,10 @@ packages:
     dependency: "direct main"
     description:
       name: firebase_auth
+
       sha256: "19508428ca37f611ae47067ee6ebb3ba5a27014941177cc224f71bf7d0720cdd"
+
+      sha256: "64ac4dc04b51aab9d17c23b496c90f948b9ce2065d7b83e0829c7a497d88f9ce"
       url: "https://pub.dev"
     source: hosted
     version: "4.6.2"
@@ -134,6 +151,8 @@ packages:
     description:
       name: firebase_auth_platform_interface
       sha256: e46e136a6f6eec88b30f12445ff7f5b19b23b7ede694921ced4f8eba8eb634f6
+
+      sha256: "63fd67d125ae483722ff3742953e2e06bbc1e6cb3da68e5f7f4430d5f82f9373"
       url: "https://pub.dev"
     source: hosted
     version: "6.15.2"
@@ -142,6 +161,8 @@ packages:
     description:
       name: firebase_auth_web
       sha256: "553bd576d793d05b920971a2c7ab02bd049d4971153702074ea2555877efd392"
+
+      sha256: "241a4ecce80da2014e3cd93d7b7e1a66e9b683e4241d466d73676ac90599b805"
       url: "https://pub.dev"
     source: hosted
     version: "5.5.2"
@@ -150,6 +171,8 @@ packages:
     description:
       name: firebase_core
       sha256: e9b36b391690cf329c6fb1de220045e97c13784c303820cd33962319580a56c6
+
+      sha256: "250678b816279b3240c3a33e1f76bf712c00718f1fbeffc85873a5da8c077379"
       url: "https://pub.dev"
     source: hosted
     version: "2.13.1"
@@ -211,6 +234,8 @@ packages:
     description:
       name: flutter_screenutil
       sha256: "1b61f8c4cbf965104b6ca7160880ff1af6755aad7fec70b58444245132453745"
+
+      sha256: "0a122936b450324cbdfd51be0819cc6fcebb093eb65585e9cd92263f7a1a8a39"
       url: "https://pub.dev"
     source: hosted
     version: "5.8.4"
@@ -285,6 +310,8 @@ packages:
     description:
       name: http
       sha256: "5895291c13fa8a3bd82e76d5627f69e0d85ca6a30dcac95c4ea19a5d555879c2"
+
+      sha256: "6aa2946395183537c8b880962d935877325d6a09a2867c3970c05c0fed6ac482"
       url: "https://pub.dev"
     source: hosted
     version: "0.13.6"
@@ -317,6 +344,8 @@ packages:
     description:
       name: lints
       sha256: "6b0206b0bf4f04961fc5438198ccb3a885685cd67d4d4a32cc20ad7f8adbe015"
+
+      sha256: "5e4a9cd06d447758280a8ac2405101e0e2094d2a1dbdd3756aec3fe7775ba593"
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
@@ -413,6 +442,8 @@ packages:
     description:
       name: petitparser
       sha256: cb3798bef7fc021ac45b308f4b51208a152792445cce0448c9a4ba5879dd8750
+
+      sha256: "49392a45ced973e8d94a85fdb21293fbb40ba805fc49f2965101ae748a3683b4"
       url: "https://pub.dev"
     source: hosted
     version: "5.4.0"
@@ -594,9 +625,14 @@ packages:
     description:
       name: xml
       sha256: "5bc72e1e45e941d825fd7468b9b4cc3b9327942649aeb6fc5cdbf135f0a86e84"
+
+      sha256: ac0e3f4bf00ba2708c33fbabbbe766300e509f8c82dbd4ab6525039813f7e2fb
       url: "https://pub.dev"
     source: hosted
     version: "6.3.0"
 sdks:
   dart: ">=3.0.0-417 <4.0.0"
   flutter: ">=3.10.0"
+
+  dart: ">=3.0.0-0 <4.0.0"
+  flutter: ">=3.7.0"

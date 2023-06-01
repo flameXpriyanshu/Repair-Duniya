@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:repair_duniya/Model_Screens/Buy_Appliances/product_screen.dart';
 
 class product_card extends StatelessWidget {
@@ -9,6 +10,7 @@ class product_card extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context);
     return Column(
       children: [
         ClipRRect(
@@ -28,21 +30,21 @@ class product_card extends StatelessWidget {
                   child: Image.asset(
                     "screen_assets/${img}.jpg",
                     fit: BoxFit.cover,
-                    height: 230,
+                    height: 200.h,
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 10),
                   child: Container(
-                    height: 25,
-                    width: 85,
+                    height: 25.h,
+                    width: 85.w,
                     color: Colors.redAccent.withOpacity(0.6),
                     child: const Center(
                       child: Text(
                         "30% Discount",
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w500),
                       ),
                     ),
@@ -55,6 +57,9 @@ class product_card extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
+        // SizedBox(
+        //   height: 10.h,
+        // ),
         Padding(
           padding: const EdgeInsets.only(left: 5),
           child: Align(
@@ -65,12 +70,15 @@ class product_card extends StatelessWidget {
                 Text(
                   title,
                   style: TextStyle(
-                      fontSize: 19,
+                      fontSize: 19.sp,
                       fontWeight: FontWeight.w500,
                       color: Colors.black.withOpacity(0.7)),
                 ),
                 const SizedBox(
                   height: 2,
+
+                SizedBox(
+                  height: 2.h,
                 ),
                 ClipRRect(
                   child: Text(
@@ -86,11 +94,14 @@ class product_card extends StatelessWidget {
                 ),
                 // Add more content widgets as needed
 
+
                 const SizedBox(height: 5),
+
+                SizedBox(height: 4.h),
                 Text(
                   "Rate",
                   style: TextStyle(
-                      fontSize: 19,
+                      fontSize: 19.sp,
                       fontWeight: FontWeight.w500,
                       color: Colors.red.withOpacity(0.7)),
                 ),

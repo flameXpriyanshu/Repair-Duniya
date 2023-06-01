@@ -94,7 +94,7 @@ class AccessViewState extends State<AccessView> {
                                 keyboardType: TextInputType.name,
                                 decoration: InputDecoration(
                                   filled: true,
-                                  fillColor: Colors.white,
+                                  fillColor: Colors.white.withOpacity(0.6),
                                   labelText: 'Enter 4 digit code here',
                                   labelStyle:
                                       const TextStyle(color: Colors.black),

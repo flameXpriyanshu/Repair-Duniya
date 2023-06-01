@@ -22,7 +22,7 @@ class Support extends StatelessWidget {
             ),
             Container(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 3,
+              height: MediaQuery.of(context).size.height / 3.3,
               padding: EdgeInsets.symmetric(vertical: 40, horizontal: 25),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
@@ -95,7 +95,7 @@ class Support extends StatelessWidget {
                       ),
                       Image.asset(
                         'assets/icon_new.png',
-                        scale: 4,
+                        scale: 3.3,
                       ),
                     ],
                   )

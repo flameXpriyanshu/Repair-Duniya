@@ -410,6 +410,26 @@ Widget Cleaning(BuildContext context) {
             image: const DecorationImage(
               image: ExactAssetImage('assets/cleaning.png'),
               fit: BoxFit.scaleDown,
+
+  return Container(
+    child: Column(
+      children: [
+        Material(
+          type: MaterialType.transparency,
+          child: Ink(
+            height: 50.w,
+            width: 50.w,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(7),
+             // border: Border.all(width: 1, color: Colors.grey),
+              color: Colors.white,
+              image: DecorationImage(
+                image: ExactAssetImage('assets/cleaning.png'),
+                fit: BoxFit.scaleDown,
+              ),
+            ),
+            child: InkWell(
+              onTap: () {},
             ),
           ),
           child: InkWell(
