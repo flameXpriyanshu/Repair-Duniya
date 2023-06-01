@@ -1,15 +1,15 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+// import 'package:flutter/src/widgets/container.dart';
+// import 'package:flutter/src/widgets/framework.dart';
 
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pinput/pinput.dart';
-import 'package:repair_duniya/Model_Screens/Home_Screen/home.dart';
+// import 'package:repair_duniya/Model_Screens/Home_Screen/home.dart';
 import 'package:repair_duniya/Model_Screens/Login_All_Screen/phone.dart';
-import '../../main.dart';
+// import '../../main.dart';
 
 class MyOtp extends StatefulWidget {
   final List<String> imgList = ["assets/otp1.jpg", "assets/otp2.jpg"];
@@ -51,7 +51,7 @@ class _MyOtpState extends State<MyOtp> {
 
     final List<Widget> imgSlider = widget.imgList
         .map(
-          (item) => Container(
+          (item) => SizedBox(
             height: 500.h,
             width: 1000.w,
             child: Stack(
@@ -88,7 +88,7 @@ class _MyOtpState extends State<MyOtp> {
               return Container(
                 width: 8.h,
                 height: 8.h,
-                margin: EdgeInsets.symmetric(
+                margin: const EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 3,
                 ),
@@ -116,19 +116,22 @@ class _MyOtpState extends State<MyOtp> {
           SizedBox(
             height: 25.h,
           ),
-          Pinput(
-            defaultPinTheme: defaultPinTheme,
-            length: 6,
-            showCursor: true,
-            onChanged: (value) {
-              code = value;
-            },
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Pinput(
+              defaultPinTheme: defaultPinTheme,
+              length: 6,
+              showCursor: true,
+              onChanged: (value) {
+                code = value;
+              },
+            ),
           ),
           SizedBox(
             height: 15.h,
           ),
           Container(
-            margin: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+            margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
             height: 45.h,
             width: double.infinity,
             child: ElevatedButton(
@@ -143,16 +146,22 @@ class _MyOtpState extends State<MyOtp> {
                   print("Wrong OTP");
                 }
               },
-              child: Text('Verify code'),
               style: ElevatedButton.styleFrom(
-                  primary: Colors.black,
+                  backgroundColor: Colors.black,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10))),
+              child: Text(
+                'Verify code',
+                style: TextStyle(
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
             ),
           ),
           Row(
             children: [
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 5, vertical: 0),
               ),
               TextButton(
@@ -163,7 +172,9 @@ class _MyOtpState extends State<MyOtp> {
                   child: Text(
                     'Edit phone number?',
                     style: TextStyle(
-                        color: Colors.black, fontWeight: FontWeight.bold),
+                        fontSize: 14.sp,
+                        color: Colors.grey.shade600,
+                        fontWeight: FontWeight.bold),
                   )),
             ],
           ),

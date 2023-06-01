@@ -8,11 +8,13 @@ class PageIndicator extends StatelessWidget {
   Widget _indicator(int index) {
     return Expanded(
       child: Container(
-        margin: EdgeInsets.symmetric(horizontal: 4.0),
+        margin: const EdgeInsets.symmetric(horizontal: 4.0),
         height: 4.0,
         decoration: BoxDecoration(
-            color: index == currentIndex ? Color(0xFF3E4750) : Colors.grey,
-            boxShadow: [
+            borderRadius: BorderRadius.circular(20),
+            color:
+                index == currentIndex ? const Color(0xFF3E4750) : Colors.grey,
+            boxShadow: const [
               BoxShadow(
                   color: Colors.black12,
                   offset: Offset(0.0, 2.0),

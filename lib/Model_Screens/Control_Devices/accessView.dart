@@ -24,12 +24,12 @@ class AccessViewState extends State<AccessView> {
                   const EdgeInsets.symmetric(horizontal: 20.0, vertical: 60),
               child: Container(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(20),
                   border: Border.all(
                       color: Colors.black.withOpacity(0.2), width: 2),
                 ),
                 child: ClipRRect(
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.circular(20),
                     child: Image.asset(
                       'assets/order.jpeg',
                     )),
@@ -69,61 +69,26 @@ class AccessViewState extends State<AccessView> {
                             horizontal: 32.0, vertical: 80),
                         child: Column(
                           children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      width: 8.0,
-                                      height: 8.0,
-                                      margin: const EdgeInsets.only(
-                                          top: 8.0, right: 8.0),
-                                      decoration: const BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                    const Expanded(
-                                      child: Text(
-                                        'Wait until a unique code will be delivered along with the box package',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 18),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(
-                                  height: 20,
-                                ),
-                                Row(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      width: 8.0,
-                                      height: 8.0,
-                                      margin: const EdgeInsets.only(
-                                          top: 8.0, right: 8.0),
-                                      decoration: const BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                    const Expanded(
-                                      child: Text(
-                                        'Enter the code in below box click on get access',
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 18),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                            const Text(
+                              ' ⚪️ Wait until a unique code will be delivered along with the box package',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18),
+                            ),
+                            const SizedBox(
+                              height: 20,
+                            ),
+                            const Text(
+                              ' ⚪️ Enter the code in below box click on get access',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18),
+                            ),
+                            SizedBox(
+                              height: 20.h,
                             ),
                             Padding(
                               padding: const EdgeInsets.symmetric(
-                                  horizontal: 8, vertical: 30),
+                                horizontal: 8,
+                              ),
                               child: TextField(
                                 controller: _codeController,
                                 keyboardType: TextInputType.name,
@@ -144,43 +109,46 @@ class AccessViewState extends State<AccessView> {
                                 ),
                               ),
                             ),
+                            SizedBox(
+                              height: 20.h,
+                            ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 SizedBox(
-                                  height: 50,
-                                  width: 130,
+                                  height: 45.h,
+                                  width: 130.w,
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
                                         backgroundColor: Colors.purple[200],
                                         shape: RoundedRectangleBorder(
                                             borderRadius:
-                                                BorderRadius.circular(15))),
+                                                BorderRadius.circular(10))),
                                     onPressed: () {},
-                                    child: const Text(
+                                    child: Text(
                                       'Cancel order',
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: 17,
+                                          fontSize: 17.sp,
                                           fontWeight: FontWeight.w700),
                                     ),
                                   ),
                                 ),
                                 SizedBox(
-                                  height: 50,
-                                  width: 130,
+                                  height: 45.h,
+                                  width: 130.w,
                                   child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                        primary: Colors.purple[200],
+                                        backgroundColor: Colors.purple[200],
                                         shape: RoundedRectangleBorder(
                                             borderRadius:
-                                                BorderRadius.circular(15))),
+                                                BorderRadius.circular(10))),
                                     onPressed: () {},
-                                    child: const Text(
+                                    child: Text(
                                       'Get access ',
                                       style: TextStyle(
                                           color: Colors.white,
-                                          fontSize: 17,
+                                          fontSize: 17.sp,
                                           fontWeight: FontWeight.w700),
                                     ),
                                   ),

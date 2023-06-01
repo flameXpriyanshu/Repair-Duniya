@@ -13,371 +13,353 @@ Widget homeIconText(String text) {
 }
 
 Widget AC(BuildContext context) {
-  return Container(
-    child: Column(
-      children: [
-        Material(
-          type: MaterialType.transparency,
-          child: Ink(
-            height: 50.w,
-            width: 50.w,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: ExactAssetImage('assets/air-conditioner.png'),
-                fit: BoxFit.scaleDown,
-              ),
-              borderRadius: BorderRadius.circular(7),
-              // border: Border.all(width: 1, color: Colors.grey),
-              color: Colors.white,
+  return Column(
+    children: [
+      Material(
+        type: MaterialType.transparency,
+        child: Ink(
+          height: 50.w,
+          width: 50.w,
+          decoration: BoxDecoration(
+            image: const DecorationImage(
+              image: ExactAssetImage('assets/air-conditioner.png'),
+              fit: BoxFit.scaleDown,
             ),
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Icons_widget(
-                          "screen_assets/ac-service-mistribabu.png",
-                          "screen_assets/ac1.jpeg",
-                          "Air Conditioner")),
-                );
-              },
-            ),
+            borderRadius: BorderRadius.circular(7),
+            // border: Border.all(width: 1, color: Colors.grey),
+            color: Colors.white,
+          ),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Icons_widget(
+                        "screen_assets/ac-service-mistribabu.png",
+                        "screen_assets/ac1.jpeg",
+                        "Air Conditioner")),
+              );
+            },
           ),
         ),
-        Column(
-          children: [
-            homeIconText('AC'),
-          ],
-        ),
-      ],
-    ),
+      ),
+      Column(
+        children: [
+          homeIconText('AC'),
+        ],
+      ),
+    ],
   );
 }
 
 Widget Washer(BuildContext context) {
-  return Container(
-    child: Column(
-      children: [
-        Material(
-          type: MaterialType.transparency,
-          child: Ink(
-            height: 50.w,
-            width: 50.w,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(7),
-              // border: Border.all(width: 1, color: Colors.grey),
-              color: Colors.white,
-              image: DecorationImage(
-                  image: ExactAssetImage('assets/washing-machine.png'),
-                  fit: BoxFit.contain),
-            ),
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Icons_widget(
-                          "screen_assets/wash1.jpeg",
-                          "screen_assets/wash2.jpeg",
-                          "Washing Machine")),
-                );
-              },
-            ),
+  return Column(
+    children: [
+      Material(
+        type: MaterialType.transparency,
+        child: Ink(
+          height: 50.w,
+          width: 50.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7),
+            // border: Border.all(width: 1, color: Colors.grey),
+            color: Colors.white,
+            image: const DecorationImage(
+                image: ExactAssetImage('assets/washing-machine.png'),
+                fit: BoxFit.contain),
+          ),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Icons_widget(
+                        "screen_assets/wash1.jpeg",
+                        "screen_assets/wash2.jpeg",
+                        "Washing Machine")),
+              );
+            },
           ),
         ),
-        Column(
-          children: [
-            homeIconText('Washer'),
-          ],
-        ),
-      ],
-    ),
+      ),
+      Column(
+        children: [
+          homeIconText('Washer'),
+        ],
+      ),
+    ],
   );
 }
 
 Widget Oven(BuildContext context) {
-  return Container(
-    child: Column(
-      children: [
-        Material(
-          type: MaterialType.transparency,
-          child: Ink(
-            height: 50.w,
-            width: 50.w,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(7),
-              // border: Border.all(width: 1, color: Colors.grey),
-              color: Colors.white,
-              image: DecorationImage(
-                image: ExactAssetImage('assets/oven.png'),
-                fit: BoxFit.scaleDown,
-              ),
-            ),
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Icons_widget(
-                          "screen_assets/oven1.jpeg",
-                          "screen_assets/oven2.jpg",
-                          "Microwave Oven")),
-                );
-              },
+  return Column(
+    children: [
+      Material(
+        type: MaterialType.transparency,
+        child: Ink(
+          height: 50.w,
+          width: 50.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7),
+            // border: Border.all(width: 1, color: Colors.grey),
+            color: Colors.white,
+            image:const  DecorationImage(
+              image: ExactAssetImage('assets/oven.png'),
+              fit: BoxFit.scaleDown,
             ),
           ),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Icons_widget(
+                        "screen_assets/oven1.jpeg",
+                        "screen_assets/oven2.jpg",
+                        "Microwave Oven")),
+              );
+            },
+          ),
         ),
-        Column(
-          children: [
-            homeIconText('Oven'),
-          ],
-        ),
-      ],
-    ),
+      ),
+      Column(
+        children: [
+          homeIconText('Oven'),
+        ],
+      ),
+    ],
   );
 }
 
 Widget Refrigerator(BuildContext context) {
-  return Container(
-    child: Column(
-      children: [
-        Material(
-          type: MaterialType.transparency,
-          child: Ink(
-            height: 50.w,
-            width: 50.w,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(7),
-              // border: Border.all(width: 1, color: Colors.grey),
-              color: Colors.white,
-              image: DecorationImage(
-                image: ExactAssetImage('assets/refrigerator.png'),
-                fit: BoxFit.scaleDown,
-              ),
-            ),
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Icons_widget(
-                          "screen_assets/repair-work-fridge-appliance-.jpg",
-                          "screen_assets/fridge1.jpg",
-                          "Refrigerator")),
-                );
-              },
+  return Column(
+    children: [
+      Material(
+        type: MaterialType.transparency,
+        child: Ink(
+          height: 50.w,
+          width: 50.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7),
+            // border: Border.all(width: 1, color: Colors.grey),
+            color: Colors.white,
+            image: const DecorationImage(
+              image: ExactAssetImage('assets/refrigerator.png'),
+              fit: BoxFit.scaleDown,
             ),
           ),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Icons_widget(
+                        "screen_assets/repair-work-fridge-appliance-.jpg",
+                        "screen_assets/fridge1.jpg",
+                        "Refrigerator")),
+              );
+            },
+          ),
         ),
-        Column(
-          children: [
-            homeIconText('Refrigerator'),
-          ],
-        ),
-      ],
-    ),
+      ),
+      Column(
+        children: [
+          homeIconText('Refrigerator'),
+        ],
+      ),
+    ],
   );
 }
 
 Widget Fan(BuildContext context) {
-  return Container(
-    child: Column(
-      children: [
-        Material(
-          type: MaterialType.transparency,
-          child: Ink(
-            height: 50.w,
-            width: 50.w,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(7),
-              // border: Border.all(width: 1, color: Colors.grey),
-              color: Colors.white,
-              image: DecorationImage(
-                image: ExactAssetImage('assets/Fan.png'),
-                fit: BoxFit.scaleDown,
-              ),
-            ),
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Icons_widget(
-                          "screen_assets/fan1.jpg",
-                          "screen_assets/fan2.jpg",
-                          "Fan")),
-                );
-              },
+  return Column(
+    children: [
+      Material(
+        type: MaterialType.transparency,
+        child: Ink(
+          height: 50.w,
+          width: 50.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7),
+            // border: Border.all(width: 1, color: Colors.grey),
+            color: Colors.white,
+            image: const DecorationImage(
+              image: ExactAssetImage('assets/Fan.png'),
+              fit: BoxFit.scaleDown,
             ),
           ),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Icons_widget(
+                        "screen_assets/fan1.jpg",
+                        "screen_assets/fan2.jpg",
+                        "Fan")),
+              );
+            },
+          ),
         ),
-        Column(
-          children: [
-            homeIconText('Fan'),
-          ],
-        ),
-      ],
-    ),
+      ),
+      Column(
+        children: [
+          homeIconText('Fan'),
+        ],
+      ),
+    ],
   );
 }
 
 Widget Motercycle(BuildContext context) {
-  return Container(
-    child: Column(
-      children: [
-        Material(
-          type: MaterialType.transparency,
-          child: Ink(
-            height: 50.w,
-            width: 50.w,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(7),
-              // border: Border.all(width: 1, color: Colors.grey),
-              color: Colors.white,
-              image: DecorationImage(
-                image: ExactAssetImage('assets/motorbike.png'),
-                fit: BoxFit.scaleDown,
-              ),
-            ),
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Icons_widget(
-                          "screen_assets/oven1.jpeg",
-                          "screen_assets/oven2.jpg",
-                          "Motorcycle")),
-                );
-              },
+  return Column(
+    children: [
+      Material(
+        type: MaterialType.transparency,
+        child: Ink(
+          height: 50.w,
+          width: 50.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7),
+            // border: Border.all(width: 1, color: Colors.grey),
+            color: Colors.white,
+            image: const DecorationImage(
+              image: ExactAssetImage('assets/motorbike.png'),
+              fit: BoxFit.scaleDown,
             ),
           ),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Icons_widget(
+                        "screen_assets/oven1.jpeg",
+                        "screen_assets/oven2.jpg",
+                        "Motorcycle")),
+              );
+            },
+          ),
         ),
-        Column(
-          children: [
-            homeIconText('Motercycle'),
-          ],
-        ),
-      ],
-    ),
+      ),
+      Column(
+        children: [
+          homeIconText('Motercycle'),
+        ],
+      ),
+    ],
   );
 }
 
 Widget Television(BuildContext context) {
-  return Container(
-    child: Column(
-      children: [
-        Material(
-          type: MaterialType.transparency,
-          child: Ink(
-            height: 50.w,
-            width: 50.w,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(7),
-              // border: Border.all(width: 1, color: Colors.grey),
-              color: Colors.white,
-              image: DecorationImage(
-                image: ExactAssetImage('assets/tv.png'),
-                fit: BoxFit.scaleDown,
-              ),
-            ),
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Icons_widget(
-                          "screen_assets/tv2.jpg",
-                          "screen_assets/tv3.jpg",
-                          "Television")),
-                );
-              },
+  return Column(
+    children: [
+      Material(
+        type: MaterialType.transparency,
+        child: Ink(
+          height: 50.w,
+          width: 50.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7),
+            // border: Border.all(width: 1, color: Colors.grey),
+            color: Colors.white,
+            image: const DecorationImage(
+              image: ExactAssetImage('assets/tv.png'),
+              fit: BoxFit.scaleDown,
             ),
           ),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Icons_widget(
+                        "screen_assets/tv2.jpg",
+                        "screen_assets/tv3.jpg",
+                        "Television")),
+              );
+            },
+          ),
         ),
-        Column(
-          children: [
-            homeIconText('Television'),
-          ],
-        ),
-      ],
-    ),
+      ),
+      Column(
+        children: [
+          homeIconText('Television'),
+        ],
+      ),
+    ],
   );
 }
 
 Widget More(BuildContext context) {
-  return Container(
-    child: Column(
-      children: [
-        Material(
-          type: MaterialType.transparency,
-          child: Ink(
-            height: 50.w,
-            width: 50.w,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(7),
-              // border: Border.all(width: 1, color: Colors.grey),
-              color: Colors.white,
-              image: DecorationImage(
-                image: ExactAssetImage('assets/More.png'),
-                fit: BoxFit.scaleDown,
-              ),
-            ),
-            child: InkWell(
-              onTap: () {},
+  return Column(
+    children: [
+      Material(
+        type: MaterialType.transparency,
+        child: Ink(
+          height: 50.w,
+          width: 50.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7),
+            // border: Border.all(width: 1, color: Colors.grey),
+            color: Colors.white,
+            image: const DecorationImage(
+              image: ExactAssetImage('assets/More.png'),
+              fit: BoxFit.scaleDown,
             ),
           ),
+          child: InkWell(
+            onTap: () {},
+          ),
         ),
-        Column(
-          children: [
-            homeIconText('More'),
-          ],
-        ),
-      ],
-    ),
+      ),
+      Column(
+        children: [
+          homeIconText('More'),
+        ],
+      ),
+    ],
   );
 }
 
 Widget Salon(BuildContext context) {
-  return Container(
-    child: Column(
-      children: [
-        Material(
-          type: MaterialType.transparency,
-          child: Ink(
-            height: 50.w,
-            width: 50.w,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(7),
-              // border: Border.all(width: 1, color: Colors.grey),
-              color: Colors.white,
-              image: DecorationImage(
-                image: ExactAssetImage('assets/salon.png'),
-                fit: BoxFit.scaleDown,
-              ),
-            ),
-            child: InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MySalon()),
-                );
-              },
+  return Column(
+    children: [
+      Material(
+        type: MaterialType.transparency,
+        child: Ink(
+          height: 50.w,
+          width: 50.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7),
+            // border: Border.all(width: 1, color: Colors.grey),
+            color: Colors.white,
+            image: const DecorationImage(
+              image: ExactAssetImage('assets/salon.png'),
+              fit: BoxFit.scaleDown,
             ),
           ),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MySalon()),
+              );
+            },
+          ),
         ),
-        Column(
-          children: [
-            homeIconText('Men Salon'),
-          ],
-        ),
-      ],
-    ),
+      ),
+      Column(
+        children: [
+          homeIconText('Men Salon'),
+        ],
+      ),
+    ],
   );
 }
 
 Widget Painting(BuildContext context) {
-  return Container(
+  return SizedBox(
     child: Column(
       children: [
         Material(
@@ -389,7 +371,7 @@ Widget Painting(BuildContext context) {
               borderRadius: BorderRadius.circular(7),
               // border: Border.all(width: 1, color: Colors.grey),
               color: Colors.white,
-              image: DecorationImage(
+              image: const DecorationImage(
                 image: ExactAssetImage('assets/paint.png'),
                 fit: BoxFit.scaleDown,
               ),
@@ -415,75 +397,70 @@ Widget Painting(BuildContext context) {
 }
 
 Widget Cleaning(BuildContext context) {
-  return Container(
-    child: Column(
-      children: [
-        Material(
-          type: MaterialType.transparency,
-          child: Ink(
-            height: 50.w,
-            width: 50.w,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(7),
-              border: Border.all(width: 1, color: Colors.grey),
-              color: Colors.white,
-              image: DecorationImage(
-                image: ExactAssetImage('assets/cleaning.png'),
-                fit: BoxFit.scaleDown,
-              ),
-            ),
-            child: InkWell(
-              onTap: () {},
+  return Column(
+    children: [
+      Material(
+        type: MaterialType.transparency,
+        child: Ink(
+          height: 50.w,
+          width: 50.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7),
+            color: Colors.white,
+            image: const DecorationImage(
+              image: ExactAssetImage('assets/cleaning.png'),
+              fit: BoxFit.scaleDown,
             ),
           ),
+          child: InkWell(
+            onTap: () {},
+          ),
         ),
-        Column(
-          children: [
-            homeIconText('Cleaning'),
-          ],
-        ),
-      ],
-    ),
+      ),
+      Column(
+        children: [
+          homeIconText('Cleaning'),
+        ],
+      ),
+    ],
   );
 }
 
 Widget More_service(BuildContext context) {
-  return Container(
-    child: Column(
-      children: [
-        Material(
-          type: MaterialType.transparency,
-          child: Ink(
-            height: 50.w,
-            width: 50.w,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(7),
-              // border: Border.all(width: 1, color: Colors.grey),
-              color: Colors.white,
-              image: DecorationImage(
-                image: ExactAssetImage('assets/More.png'),
-                fit: BoxFit.scaleDown,
-              ),
-            ),
-            child: InkWell(
-              onTap: () {},
+  return Column(
+    children: [
+      Material(
+        type: MaterialType.transparency,
+        child: Ink(
+          height: 50.w,
+          width: 50.w,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(7),
+
+            color: Colors.white,
+            image: const DecorationImage(
+              image: ExactAssetImage('assets/More.png'),
+              fit: BoxFit.scaleDown,
             ),
           ),
+          child: InkWell(
+            onTap: () {},
+          ),
         ),
-        Column(
-          children: [
-            homeIconText('More'),
-          ],
-        ),
-      ],
-    ),
+      ),
+      Column(
+        children: [
+          homeIconText('More'),
+        ],
+      ),
+    ],
   );
 }
 
 Widget _buildBody() {
   return ClipRRect(
       borderRadius: BorderRadius.circular(14),
-      child: Container(
+      child: SizedBox(
         height: 180.h,
         width: 500.w,
         child: Stack(children: <Widget>[
@@ -493,17 +470,15 @@ Widget _buildBody() {
             width: double.infinity,
             colorBlendMode: BlendMode.darken,
           ),
-          Center(child: Text("hello")),
+         const  Center(child: Text("hello")),
         ]),
       ));
 }
 
-Widget gas = Container(
-  child: Column(
-    children: [
-      IconButton(
-          onPressed: () {}, icon: Icon(Icons.local_gas_station_outlined)),
-      homeIconText('Gas'),
-    ],
-  ),
+Widget gas = Column(
+  children: [
+    IconButton(
+        onPressed: () {}, icon:const  Icon(Icons.local_gas_station_outlined)),
+    homeIconText('Gas'),
+  ],
 );

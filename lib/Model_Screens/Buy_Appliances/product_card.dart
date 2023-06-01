@@ -37,7 +37,7 @@ class product_card extends StatelessWidget {
                     height: 25,
                     width: 85,
                     color: Colors.redAccent.withOpacity(0.6),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "30% Discount",
                         style: TextStyle(
@@ -52,11 +52,11 @@ class product_card extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Padding(
-          padding: EdgeInsets.only(left: 5),
+          padding: const EdgeInsets.only(left: 5),
           child: Align(
             alignment: Alignment.centerLeft,
             child: Column(
@@ -69,7 +69,7 @@ class product_card extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                       color: Colors.black.withOpacity(0.7)),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 2,
                 ),
                 ClipRRect(
@@ -86,7 +86,7 @@ class product_card extends StatelessWidget {
                 ),
                 // Add more content widgets as needed
 
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 Text(
                   "Rate",
                   style: TextStyle(

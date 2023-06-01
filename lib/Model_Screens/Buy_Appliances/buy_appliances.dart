@@ -24,7 +24,7 @@ class Buy_appliances extends StatelessWidget {
     "Havells(3L)",
     "Bajaj Splendora(3L)",
     "LG 7Kg 5star",
-    "Voltas 1.5 Ton 3star,\nInverter Split AC",
+    "Voltas 1.5 Ton 3star AC",
     "Havells(3L)"
   ];
 
@@ -34,12 +34,12 @@ class Buy_appliances extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
           child: Padding(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.all(0),
+              padding: const EdgeInsets.all(0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -50,7 +50,7 @@ class Buy_appliances extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: TextFormField(
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           label: Text("Find your appliances"),
                           border: InputBorder.none,
                           prefixIcon: Icon(
@@ -64,7 +64,7 @@ class Buy_appliances extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 20),
+              margin: const EdgeInsets.only(top: 20),
               alignment: Alignment.center,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(30),
@@ -78,25 +78,25 @@ class Buy_appliances extends StatelessWidget {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Padding(
-                padding: EdgeInsets.only(top: 25),
+                padding: const EdgeInsets.only(top: 25),
                 child: Row(
                   children: [
                     for (int i = 0; i < CatList.length; i++)
                       Container(
-                        margin: EdgeInsets.all(8),
-                        padding:
-                            EdgeInsets.symmetric(vertical: 10, horizontal: 18),
+                        margin: const EdgeInsets.all(8),
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 10, horizontal: 18),
                         decoration: BoxDecoration(
                             color: CatList[i] == "All"
-                                ? Color(0xFFFD725A)
-                                : Color.fromARGB(255, 224, 225, 227),
+                                ? const Color(0xFFFD725A)
+                                : const Color.fromARGB(255, 224, 225, 227),
                             borderRadius: BorderRadius.circular(18)),
                         child: Text(
                           CatList[i],
                           style: TextStyle(
                             fontSize: 16.sp,
                             color: CatList[i] == "All"
-                                ? Color.fromARGB(255, 244, 241, 241)
+                                ? const Color.fromARGB(255, 244, 241, 241)
                                 : Colors.grey.shade500,
                           ),
                         ),
@@ -106,7 +106,7 @@ class Buy_appliances extends StatelessWidget {
               ),
             ),
             GridView.builder(
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
