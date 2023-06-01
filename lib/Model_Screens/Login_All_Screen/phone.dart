@@ -68,7 +68,7 @@ class _MyPhoneState extends State<MyPhone> {
                 return Container(
                   width: 8.w,
                   height: 8.h,
-                  margin: EdgeInsets.symmetric(
+                  margin: const EdgeInsets.symmetric(
                     vertical: 10,
                     horizontal: 3,
                   ),
@@ -83,7 +83,7 @@ class _MyPhoneState extends State<MyPhone> {
             ),
             Text(
               'Lets get started',
-              style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 18.sp, fontWeight: FontWeight.bold),
               textAlign: TextAlign.left,
             ),
             SizedBox(
@@ -91,13 +91,13 @@ class _MyPhoneState extends State<MyPhone> {
             ),
             Text(
               'Verify your account using OTP',
-              style: TextStyle(fontSize: 14.sp),
+              style: TextStyle(fontSize: 15.sp),
             ),
             SizedBox(
               height: 5.h,
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
               height: 55.h,
               decoration: BoxDecoration(
                   border: Border.all(width: 1, color: Colors.grey),
@@ -139,7 +139,7 @@ class _MyPhoneState extends State<MyPhone> {
                       onChanged: (value) {
                         phone = value;
                       },
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                           border: InputBorder.none,
                           hintText: "Enter phone number"),
                     ),
@@ -148,7 +148,7 @@ class _MyPhoneState extends State<MyPhone> {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
               height: 45.h,
               width: double.infinity,
               child: ElevatedButton(
@@ -165,9 +165,13 @@ class _MyPhoneState extends State<MyPhone> {
                     codeAutoRetrievalTimeout: (String verificationId) {},
                   );
                 },
-                child: Text('Send the code'),
+                child: Text('Send the code',
+                    style: TextStyle(
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w500,
+                        color: Colors.white)),
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.black,
+                    backgroundColor: Colors.black,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10))),
               ),

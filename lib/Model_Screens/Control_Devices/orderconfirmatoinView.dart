@@ -60,7 +60,7 @@ class OrderConfirmationView extends StatelessWidget {
                         topRight: Radius.circular(30)),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(20.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: Column(
                       children: [
                         Text("Order Confirmation",
@@ -70,6 +70,7 @@ class OrderConfirmationView extends StatelessWidget {
                                 fontWeight: FontWeight.bold)),
                         SizedBox(height: 20.h),
                         Container(
+                          // width: 360.w,
                           //height: 60.h,
                           decoration: BoxDecoration(
                             color: Colors.white.withOpacity(0.5),
@@ -101,60 +102,52 @@ class OrderConfirmationView extends StatelessWidget {
                                     color: Colors.black,
                                     fontSize: 20.sp,
                                     fontWeight: FontWeight.bold)),
-                            subtitle: Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Text(
-                                  "999/-",
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 15.sp,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Text(
-                                  "  1290",
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 15.sp,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
+                            subtitle: Text(
+                              "999/-",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 15.sp,
+                                  fontWeight: FontWeight.bold),
                             ),
                             trailing: Container(
-                                height: 30.h,
-                                width: 100.w,
-                                decoration: BoxDecoration(
-                                  color: Colors.purple[200],
-                                  borderRadius: BorderRadius.circular(10),
-                                  // image: const DecorationImage(
-                                  //     image: AssetImage("assets/Road.jpeg"),
-                                  //     fit: BoxFit.cover),
+                              height: 30.h,
+                              width: 110.w,
+                              decoration: BoxDecoration(
+                                color: Colors.white.withOpacity(0.6),
+                                borderRadius: BorderRadius.circular(10),
+                                border: Border.all(
+                                  color: Colors.white.withOpacity(0.5),
+                                  width: 1,
                                 ),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    IconButton(
-                                        onPressed: () {},
-                                        icon: const Icon(
-                                          Icons.remove,
-                                          color: Colors.black,
-                                        )),
-                                    Text(
-                                      "1",
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 20.sp,
-                                          fontWeight: FontWeight.w600),
-                                    ),
-                                    IconButton(
-                                        onPressed: () {},
-                                        icon: const Icon(
-                                          Icons.add,
-                                          color: Colors.black,
-                                        ))
-                                  ],
-                                )),
+                              ),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: Icon(
+                                        Icons.remove,
+                                        color: Colors.black,
+                                        size: 16.h,
+                                      )),
+                                  Text(
+                                    "1",
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 16.sp,
+                                        fontWeight: FontWeight.w600),
+                                  ),
+                                  IconButton(
+                                      onPressed: () {},
+                                      icon: Icon(
+                                        Icons.add,
+                                        size: 16.h,
+                                        color: Colors.black,
+                                      ))
+                                ],
+                              ),
+                            ),
                           ),
                         ),
                         SizedBox(height: 20.h),

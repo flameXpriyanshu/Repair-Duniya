@@ -351,8 +351,8 @@ class _homeState extends State<Myhome> {
                                   fontWeight: FontWeight.bold),
                             )),
                         Positioned(
-                          top: 120,
-                          left: 120,
+                          top: 125,
+                          left: 100,
                           child: SizedBox(
                             height: 40,
                             width: 140,
@@ -370,7 +370,7 @@ class _homeState extends State<Myhome> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            DeviceInstallView()));
+                                            const DeviceInstallView()));
                               },
                               child: const Text(
                                 "Let's Start",
@@ -386,9 +386,8 @@ class _homeState extends State<Myhome> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding:
-                      const EdgeInsets.only(top: 16.0, left: 12.0, bottom: 8.0),
+                const Padding(
+                  padding: EdgeInsets.only(top: 16.0, left: 12.0, bottom: 8.0),
                   child: Row(
                     children: [
                       Text(
@@ -414,9 +413,10 @@ class _homeState extends State<Myhome> {
                   height: 35.h,
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 0),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 0),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
                     child: Container(
                       height: 180.h,
                       width: 500.w,
@@ -465,8 +465,8 @@ class _homeState extends State<Myhome> {
                           ),
                         ),
                         Positioned(
-                          top: 120,
-                          left: 120,
+                          top: 125,
+                          left: 100,
                           child: SizedBox(
                             height: 40,
                             width: 140,
@@ -495,9 +495,6 @@ class _homeState extends State<Myhome> {
                               ),
                             ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 20.h,
                         ),
                       ]),
                     ),
