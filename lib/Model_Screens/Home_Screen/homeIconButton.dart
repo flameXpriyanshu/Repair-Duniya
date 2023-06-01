@@ -425,7 +425,7 @@ Widget Cleaning(BuildContext context) {
             width: 50.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(7),
-              border: Border.all(width: 1, color: Colors.grey),
+             // border: Border.all(width: 1, color: Colors.grey),
               color: Colors.white,
               image: DecorationImage(
                 image: ExactAssetImage('assets/cleaning.png'),

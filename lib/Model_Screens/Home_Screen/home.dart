@@ -6,6 +6,7 @@ import 'package:repair_duniya/Model_Screens/Map_Screen/location_search_screen.da
 import 'package:repair_duniya/models/constant.dart';
 
 import '../../main.dart';
+import '../Wallet/wallet.dart';
 import 'drawer.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/gestures.dart';
@@ -77,12 +78,27 @@ class _homeState extends State<Myhome> {
           ),
         ),
         actions: [
-          IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.notifications,
-                color: Colors.yellow.shade800,
-              ))
+          Row(
+            children: [
+              IconButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Wallet()));
+                  },
+                  icon:
+                  //Image.asset('assets/icons8-wallet.png',scale: 1.8,),
+                  Icon(
+                    Icons.account_balance_wallet,
+                    color: Colors.orange.shade600,
+                  )
+              ),
+              IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.notifications,
+                    color: Colors.yellow.shade800,
+                  )),
+            ],
+          )
         ],
       ),
       body: SingleChildScrollView(

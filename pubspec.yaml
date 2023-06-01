@@ -37,7 +37,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   onboarding_screen: ^0.0.3
-  pinput: ^2.2.12
+  pinput: ^2.2.31
   carousel_slider: ^4.2.1
   country_picker: ^2.0.16
   firebase_core: ^2.9.0
